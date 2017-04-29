@@ -23,7 +23,7 @@ Pack of 15 unique placeholder animations. Just pick the demo you like most and i
 </div>
 ```
 
-- Use **placeholder attribute** and **id attribute** for inputs and textareas. **_Note! Use only <button> tag for submit buttons_**
+- Use **placeholder attribute** and **id attribute** for inputs and textareas. **_Note! Use only `<button>` tag for submit buttons_**
 
 ```html
 <div class="your-class">
@@ -32,13 +32,13 @@ Pack of 15 unique placeholder animations. Just pick the demo you like most and i
     <button type="submit">Submit</button>
 </div>
 ```
-- Add foxholder-styles.css in your <head>
+- Add foxholder-styles.css in your `<head>`
 
 ```html
 <link rel="stylesheet" href="css/foxholder-styles.css" />
 ```
 
-- Add foxholder.js in your <head> or before closing <body> tag after jQuery
+- Add foxholder.js in your `<head>` or before closing `<body>` tag after jQuery
 
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
