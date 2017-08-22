@@ -77,14 +77,14 @@ jQuery.fn.foxholder = function(number) {
     //example-3 paddings for textarea
     jQuery('#example-3 textarea').focus(function() {
       var labelWidth;
-      labelWidth = jQuery(this).siblings('label').height() + 41;
-      jQuery(this).css({'padding-top': labelWidth});
+      labelWidth = jQuery(this).siblings('label').width() + 36;
+      jQuery(this).css({'padding-left': labelWidth});
     });
 
     jQuery('#example-3 textarea').blur(function() {
       if (jQuery(this).hasClass('active')) {
       } else {
-        jQuery(this).css({'padding-top': 20});
+        jQuery(this).css({'padding-left': labelWidth});
       }
     });
 

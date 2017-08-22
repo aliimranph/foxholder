@@ -60,8 +60,4 @@ jQuery('document').ready(function() {
     demo: 15,
   });
 
-  jQuery('.form-container-ex').foxholder({
-    demo: 3,
-  });
-
 });
