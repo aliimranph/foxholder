@@ -117,17 +117,6 @@ jQuery.fn.foxholder = function(number) {
       jQuery(this).parent().append('<div class="icon-triangle"></div>');
     });
 
-    jQuery('#example-7 input').each(function() {
-
-      var inputHeight = jQuery(this).outerHeight();
-      console.log(inputHeight);
-
-      jQuery(this).siblings('.icon-triangle').css({
-        'border-width': inputHeight / 2,
-        'border-left-width': 24
-      })
-    });
-
   }
 
   if (number.demo == 9) {
@@ -155,7 +144,7 @@ jQuery.fn.foxholder = function(number) {
       }
 
       jQuery(this).focus(function() {
-        jQuery(this).css({'padding-left': labelWidth + 36});
+        jQuery(this).css({'padding-left': labelWidth + 20});
       });
 
       jQuery(this).blur(function() {

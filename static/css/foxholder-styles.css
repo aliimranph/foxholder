@@ -142,22 +142,11 @@
   color: #fff;
 }
 
-
-/*#example-3.form-container textarea:focus + label,
-#example-3.form-container textarea.active + label {
-  width: calc(100% - 2px);
-  padding: 10px 20px;
-  text-align: center;
-}*/
-
-
 /* example-4 styles */
 
 #example-4.form-container label {
   top: 1px;
   left: 1px;
-  -moz-transition: all 0.2s linear 0s;
-  -webkit-transition: all 0.2s linear 0s;
   transition: all 0.2s linear 0s;
 }
 
@@ -178,8 +167,6 @@
 #example-5.form-container label,
 #example-5.form-container input,
 #example-5.form-container textarea {
-  -moz-transition: all 0.3s linear 0s;
-  -webkit-transition: all 0.3s linear 0s;
   transition: all 0.3s linear 0s;
 }
 
@@ -202,8 +189,6 @@
 #example-6.form-container label,
 #example-6.form-container input,
 #example-6.form-container textarea {
-  -moz-transition: all 0.2s linear 0s;
-  -webkit-transition: all 0.2s linear 0s;
   transition: all 0.2s linear 0s;
 }
 
@@ -226,8 +211,6 @@
 /* example-7 styles */
 
 #example-7.form-container label {
-  -moz-transition: all 0.2s linear 0s;
-  -webkit-transition: all 0.2s linear 0s;
   transition: all 0.2s linear 0s;
 }
 
@@ -242,11 +225,7 @@
 #example-7.form-container input.active + label,
 #example-7.form-container textarea:focus + label,
 #example-7.form-container textarea.active + label {
-  -moz-transform: scale(0.3);
-  -webkit-transform: scale(0.3);
   transform: scale(0.3);
-  -moz-transform-origin: left bottom;
-  -webkit-transform-origin: left bottom;
   transform-origin: left bottom;
   opacity: 0;
 }
@@ -260,28 +239,22 @@
   position: absolute;
   left: 0px;
   top: 0px;
-  border: 32px solid transparent;
-  border-left: 24px solid transparent;
-  -moz-transition: all 0.2s linear 0s;
-  -webkit-transition: all 0.2s linear 0s;
-  transition: all 0.2s linear 0s;
+  border: 15px solid transparent;
+  border-left: 13px solid transparent;
 }
 
 #example-7.form-container input:focus + label + .icon-triangle,
 #example-7.form-container input.active + label + .icon-triangle,
 #example-7.form-container textarea:focus + label + .icon-triangle,
 #example-7.form-container textarea.active + label + .icon-triangle {
-  border-left: 24px solid #222;
-  -moz-transition: all 0.2s linear 0.2s;
-  -webkit-transition: all 0.2s linear 0.2s;
-  transition: all 0.2s linear 0.2s;
+  border-left-color: #222;
+  top: calc(50% - 14px);
+  transition: border-left-color 0.2s linear 0s, top 0.2s linear 0.2s;
 }
 
 /* example-8 styles */
 
 #example-8.form-container label {
-  -moz-transition: all 0.3s linear 0s;
-  -webkit-transition: all 0.3s linear 0s;
   transition: all 0.3s linear 0s;
 }
 
@@ -300,8 +273,6 @@
 }
 
 #example-9.form-container label {
-  -moz-transition: all 0.2s linear 0s;
-  -webkit-transition: all 0.2s linear 0s;
   transition: all 0.2s linear 0s;
 }
 
@@ -310,8 +281,6 @@
 #example-9.form-container textarea:focus + label,
 #example-9.form-container textarea.active + label {
   color: #fff;
-  -moz-transition: all 0.2s linear 0.1s;
-  -webkit-transition: all 0.2s linear 0.1s;
   transition: all 0.2s linear 0.1s;
 }
 
@@ -323,13 +292,15 @@
 }
 
 #example-9.form-container input:focus + label + .overlay,
+#example-9.form-container textarea:focus + label + .overlay {
+  transition: all 0.2s linear 0s;
+}
+
+#example-9.form-container input:focus + label + .overlay,
 #example-9.form-container input.active + label + .overlay,
 #example-9.form-container textarea:focus + label + .overlay,
 #example-9.form-container textarea.active + label + .overlay {
   left: 0 !important;
-  -moz-transition: all 0.2s linear 0s;
-  -webkit-transition: all 0.2s linear 0s;
-  transition: all 0.2s linear 0s;
 }
 
 /* example-10 styles */
