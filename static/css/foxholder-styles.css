@@ -308,8 +308,6 @@
 #example-10.form-container label,
 #example-10.form-container input,
 #example-10.form-container textarea {
-  -moz-transition: all 0.3s linear 0s;
-  -webkit-transition: all 0.3s linear 0s;
   transition: all 0.3s linear 0s;
 }
 
@@ -348,22 +346,14 @@
 /* example-11 styles */
 
 #example-11.form-container label {
-  -moz-transition: all 0.2s linear 0s;
-  -webkit-transition: all 0.2s linear 0s;
   transition: all 0.2s linear 0s;
 }
 
 #example-11.form-container .form-item-block > div {
   position: absolute;
   background-color: #4fb53a;
-  -moz-transform: scale(0);
-  -webkit-transform: scale(0);
   transform: scale(0);
-  -moz-transform-origin: center;
-  -webkit-transform-origin: center;
   transform-origin: center;
-  -moz-transition: all 0.4s linear 0s;
-  -webkit-transition: all 0.4s linear 0s;
   transition: all 0.4s linear 0s;
 }
 
@@ -402,24 +392,10 @@
   opacity: 0;
 }
 
-#example-11.form-container input:focus + label + div,
-#example-11.form-container input.active  + label + div,
-#example-11.form-container textarea:focus  + label + div,
-#example-11.form-container textarea.active + label + div,
-#example-11.form-container input:focus + label + div + div,
-#example-11.form-container input.active  + label + div + div,
-#example-11.form-container textarea:focus  + label + div + div,
-#example-11.form-container textarea.active + label + div + div,
-#example-11.form-container input:focus + label + div + div + div,
-#example-11.form-container input.active  + label + div + div + div,
-#example-11.form-container textarea:focus  + label + div + div + div,
-#example-11.form-container textarea.active + label + div + div + div,
-#example-11.form-container input:focus + label + div + div + div + div,
-#example-11.form-container input.active  + label + div + div + div + div,
-#example-11.form-container textarea:focus  + label + div + div + div + div,
-#example-11.form-container textarea.active + label + div + div + div + div  {
-  -moz-transform: scale(1);
-  -webkit-transform: scale(1);
+#example-11.form-container input:focus + label ~ div,
+#example-11.form-container input.active  + label ~ div,
+#example-11.form-container textarea:focus  + label ~ div,
+#example-11.form-container textarea.active + label ~ div {
   transform: scale(1);
 }
 
@@ -430,40 +406,32 @@
 }
 
 #example-12.form-container label {
-  -moz-transition: all 0.2s cubic-bezier(0, 0, 0.2, 1) 0s;
-  -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.2, 1) 0s;
   transition: all 0.2s cubic-bezier(0, 0, 0.2, 1) 0s;
 }
 
 #example-12.form-container .icon {
   position: absolute;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   background: #4fb53a;
   border-radius: 100px;
   left: -40px;
-  -moz-transition: all 0.2s cubic-bezier(0, 0, 0.2, 1) 0s;
-  -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.2, 1) 0s;
   transition: all 0.2s cubic-bezier(0, 0, 0.2, 1) 0s;
 }
 
 #example-12.form-container input + label + .icon {
-  top: calc(50% - 8px);
+  top: calc(50% - 5px);
 }
 
 #example-12.form-container textarea + label + .icon {
-  top: 24px;
+  top: 29px;
 }
 
 #example-12.form-container input:focus + label,
 #example-12.form-container input.active  + label,
 #example-12.form-container textarea:focus  + label,
 #example-12.form-container textarea.active + label {
-  -moz-transform: scale(0, 1);
-  -webkit-transform: scale(0, 1);
   transform: scale(0, 1);
-  -moz-transform-origin: left center;
-  -webkit-transform-origin: left center;
   transform-origin: left center;
   opacity: 0;
 }
@@ -480,9 +448,7 @@
 #example-12.form-container textarea:focus  + label + .icon,
 #example-12.form-container textarea.active + label + .icon {
   left: 20px;
-  -moz-transition: all 0.2s cubic-bezier(0, 0, 0.2, 1) 0.2s;
-  -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.2, 1) 0.2s;
-  transition: all 0.2s cubic-bezier(0, 0, 0.2, 1) 0.2s;
+  transition-delay: 0.2s;
 }
 
 /* example-13 styles */
