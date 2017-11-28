@@ -1,0 +1,29 @@
+//variables
+$form-btn-border-color: $basic-settings-color;
+$form-btn-bg-color: $default-bg-color;
+$form-btn-font-color:  $basic-settings-color;
+
+$form-btn-padding-vert: 10px;
+$form-btn-padding-horz: 20px;
+$form-btn-border-r: 4px;
+
+//forxholder button styles
+.foxholder-form {
+
+  &__button {
+    padding: $form-btn-padding-vert $form-btn-padding-horz;
+
+    font: {
+      size: inherit;
+      family: inherit;
+    }
+    color: $form-btn-font-color;
+    
+    border: 1px solid $form-btn-border-color;
+    border-radius: $form-btn-border-r;
+    background-color: $form-btn-bg-color;
+
+    outline: none;
+    cursor: pointer;
+  }
+}

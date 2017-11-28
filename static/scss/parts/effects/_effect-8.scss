@@ -1,0 +1,26 @@
+//variables
+$eff8-letter-spacing: 10px;
+
+//effect 8 styles
+
+.foxholder-form {
+
+	&__input--effect-8,
+	&__textarea--effect-8 {
+		
+		//basic styles
+		& + label {
+			@include transition-mix($duration: .3s);
+		}
+
+		//effects styles
+		&:focus,
+		&.is-active {
+
+			& + label {
+				letter-spacing: $eff8-letter-spacing;
+				opacity: 0;
+			}
+		}
+	}
+}

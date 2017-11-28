@@ -1,0 +1,81 @@
+//effect 14 styles
+
+.foxholder-form {
+
+	&__input--effect-14,
+	&__textarea--effect-14 {
+
+		border-left-color: transparent;
+		border-top-color: transparent;
+		border-right-color: transparent;
+		
+		//basic styles
+		& + label {
+			@include transition-mix;
+		}
+
+		& ~ .foxholder-form__helper {
+		  @include position-absolute;
+		  @include transition-mix;
+
+		  background-color: $input-textarea-border-color;
+
+		  &--top {
+		    top: 0px;
+		    left: 0px;
+		    width: 100%;
+		    height: $input-textarea-border-width;
+		  }
+
+		  &--left {
+		    top: 0px;
+		    left: 0px;
+		    width: $input-textarea-border-width;
+		    height: 100%;
+		  }
+
+		  &--right {
+		    top: 0px;
+		    right: 0px;
+		    width: $input-textarea-border-width;
+		    height: 100%;
+		  }
+
+		  &--left,
+		  &--right {
+		  	transform-origin: center bottom;
+		  }
+		}
+
+		//effects styles
+		&:focus,
+		&.is-active {
+
+			& + label {
+				background: #f04c1e;
+				color: #fff;
+			}
+
+			& ~ .foxholder-form__helper {
+
+				&--top {
+					top: 100%;
+				}
+
+				&--left,
+				&--right {
+					transform: scale(0);
+				}
+			}
+		}
+	}
+
+	&__input--effect-14 {
+
+		& + label {
+			top: 50%;
+			height: 80%;
+			transform: translateY(-50%);
+		}
+	}
+}

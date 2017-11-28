@@ -1,0 +1,24 @@
+//effect 1 styles
+
+.foxholder-form {
+
+	&__input--effect-1,
+	&__textarea--effect-1 {
+		
+		//basic styles
+		& + label {
+			@include transition-mix;
+
+			opacity: 1;
+		}
+
+		//effects styles
+		&:focus,
+		&.is-active {
+
+			& + label {
+				opacity: 0;
+			}
+		}
+	}
+}

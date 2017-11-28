@@ -1,0 +1,42 @@
+//variables
+$eff9-accent-color: $accent-color-1;
+$eff9-focus-color: $light-settings-color;
+
+//effect 9 styles
+
+.foxholder-form {
+
+	&__item--effect-9 {
+		overflow: hidden;
+	}
+
+	&__input--effect-9,
+	&__textarea--effect-9 {
+		
+		//basic styles
+		& + label {
+			@include transition-mix;
+			z-index: 5;
+		}
+
+		& ~ div {
+			@include position-absolute($top: 0);
+			background-color: $eff9-accent-color;
+		}
+
+		//effects styles
+		&:focus,
+		&.is-active {
+
+			& + label {
+				@include transition-mix($delay: .1s);
+				color: $eff9-focus-color;
+			}
+
+			& ~ div {
+				@include transition-mix;
+				left: 0 !important;
+			}
+		}
+	}
+}

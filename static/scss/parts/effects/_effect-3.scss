@@ -1,0 +1,52 @@
+//variables
+$eff3-accent-color: $accent-color-1;
+$eff3-focus-color: $light-settings-color;
+
+$eff3-label-extra-padding-horz: 10px;
+
+//effect 3 styles
+
+.foxholder-form {
+
+	&__item--effect-3 {
+		overflow: hidden;
+		border: $input-textarea-border-width solid $input-textarea-border-color;
+	}
+
+	&__input--effect-3,
+	&__textarea--effect-3 {
+		border: none;
+		
+		//basic styles
+		& + label {
+			@include transition-mix;
+			
+			left: -40px;
+			top: 0;
+			transform: skew(-30deg);
+			padding-left: 40px;
+			padding-right: $eff3-label-extra-padding-horz;
+
+			span {
+				transform: skew(30deg);
+			}
+		}
+
+		//effects styles
+		&:focus,
+		&.is-active {
+
+			& + label {
+				background-color: $eff3-accent-color;
+  			color: $eff3-focus-color;
+			}
+		}
+	}
+
+	&__input--effect-3 {
+
+		& + label {
+			height: 100%;
+		}
+	}
+}

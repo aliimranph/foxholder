@@ -1,0 +1,31 @@
+//variables
+$eff5-input-textarea-bg-color: $accent-color-2;
+
+//effect 5 styles
+
+.foxholder-form {
+
+	&__item--effect-5 {
+		overflow: hidden;
+	}
+
+	&__input--effect-5,
+	&__textarea--effect-5 {
+		@include transition-mix($duration: .3s);
+		
+		//basic styles
+		& + label {
+			@include transition-mix($duration: .3s);
+		}
+
+		//effects styles
+		&:focus,
+		&.is-active {
+			background-color: $eff5-input-textarea-bg-color;
+
+			& + label {
+				left: -30%;
+			}
+		}
+	}
+}

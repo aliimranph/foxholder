@@ -1,0 +1,41 @@
+//variables
+$input-textarea-border-color: $basic-settings-color;
+$input-textarea-bg-color: $default-bg-color;
+$input-textarea-font-color:  $basic-settings-color;
+
+$input-textarea-border-width: 1px;
+$input-textarea-padding: 15px;
+$textarea-height: 150px;
+
+//foxholder input styles
+.foxholder-form {
+  
+  //input and textarea styles
+  &__input,
+  &__textarea {
+    @include transition-mix;
+
+    width: 100%;
+    padding: $input-textarea-padding;
+    
+    font: {
+      size: inherit;
+      family: inherit;
+    }
+    color: $input-textarea-font-color;
+
+    background-color: $input-textarea-bg-color;
+    border: $input-textarea-border-width solid $input-textarea-border-color;
+
+    outline: none;
+    box-shadow: none;
+  }
+
+  //textarea styles
+  &__textarea {
+    display: block;
+    resize: none;
+    height: $textarea-height;
+    line-height: inherit;
+  }
+}

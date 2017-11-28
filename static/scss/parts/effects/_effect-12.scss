@@ -1,0 +1,62 @@
+//variables
+$eff12-accent-color: $accent-color-3;
+
+$eff12-icon-dimensions: 10px;
+
+//effect 12 styles
+
+.foxholder-form {
+
+	&__item--effect-12 {
+		overflow: hidden;
+	}
+
+	&__input--effect-12,
+	&__textarea--effect-12 {
+		
+		//basic styles
+		& + label {
+			
+			span {
+				@include transition-mix($timing: cubic-bezier(0, 0, 0.2, 1));
+			}
+
+			//icon styles
+			&:after {
+				@include position-absolute($top: 50%, $left: -40px);
+				@include transition-mix($timing: cubic-bezier(0, 0, 0.2, 1));
+				
+				content: '';
+				display: block;
+
+				width: $eff12-icon-dimensions;
+				height: $eff12-icon-dimensions;
+				transform: translateY(-50%);
+
+				border-radius: 50%;
+				background-color: $eff12-accent-color;
+			}
+		}
+
+		//effects styles
+		&:focus,
+		&.is-active {
+			padding-left: $input-textarea-padding * 3;
+
+			& + label {
+				
+				span {
+					transform: scale(0, 1);
+					transform-origin: left center;
+					opacity: 0;
+				}
+
+				&:after {
+					transition-delay: .2s;
+
+					left: 20px;
+				}
+			}
+		}
+	}
+}

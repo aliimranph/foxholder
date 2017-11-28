@@ -1,0 +1,20 @@
+//variables
+$form-item-offset: 28px;
+
+//foxholder form common styles
+.foxholder-form {
+
+  * {
+    box-sizing: border-box;
+  }
+
+  //form item styles
+  &__item {
+    position: relative;
+    margin-bottom: $form-item-offset;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

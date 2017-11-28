@@ -1,0 +1,62 @@
+//variables
+$eff13-accent-color: $accent-color-1;
+$eff13-focus-color: $light-settings-color;
+
+$eff13-label-offset: 20px;
+
+//effect 13 styles
+
+.foxholder-form {
+
+	&__input--effect-13,
+	&__textarea--effect-13 {
+		
+		//basic styles
+		& + label {
+			left: $eff13-label-offset;
+
+			span {
+				@include transition-mix;
+				padding: 0;
+			}
+		}
+
+		//effects styles
+		&:focus,
+		&.is-active {
+
+			& + label {
+				left: $eff13-label-offset / 2;
+				
+				span {
+					padding: $label-padding-vert / 2 $label-padding-horz;
+
+					border: 1px solid $input-textarea-border-color;
+				}
+			}
+		}
+
+		&.is-active {
+
+			& + label {
+
+				span {
+					border-color: $eff13-accent-color;
+					background-color: $eff13-accent-color;
+					color: $eff13-focus-color;
+				}
+			}
+		}
+	}
+
+	&__textarea--effect-13 {
+
+		& + label {
+			top: $eff13-label-offset / 2;
+
+			span {
+				padding: $label-padding-vert / 2 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+//variables
+$label-font-weight: 700;
+$label-offset-vert: $input-textarea-border-width;
+$label-offset-horz: $input-textarea-border-width;
+$label-padding-horz: $input-textarea-padding;
+$label-padding-vert: $input-textarea-padding;
+
+//foxholder label styles
+.foxholder-form {
+
+  &__label {
+    @include position-absolute($top: $label-offset-vert, $left: $label-offset-horz);
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+
+    font: {
+      family: inherit;
+      size: inherit;
+      weight: $label-font-weight;
+    }
+
+    background-color: transparent;
+
+    span {
+      padding: 0 $label-padding-horz;
+    }
+  }
+}
+
+//input labels
+.foxholder-form {
+
+  &__input + label {
+    height: calc(100% - 2*#{$label-offset-vert});
+  }
+
+}
+
+//textarea labels
+.foxholder-form {
+
+  &__textarea + label {
+    
+    span {
+      padding: $label-padding-vert $label-padding-horz;
+    }
+  }
+
+}

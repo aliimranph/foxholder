@@ -1,0 +1,67 @@
+//variables
+$eff15-accent-color: $accent-color-1;
+$eff15-focus-color: $light-settings-color;
+
+$eff15-helper-dimensions-half: 14px;
+$eff15-label-padding-horz: 15px;
+
+//effect 15 styles
+
+.foxholder-form {
+
+  &__input--effect-15,
+  &__textarea--effect-15 {
+    @include transition-mix;
+    
+    //basic styles
+    & + label {
+      @include transition-mix;
+
+      padding-left: $eff15-label-padding-horz;
+
+      .foxholder-form__helper {
+        @include position-absolute ($right: - $eff15-helper-dimensions-half*2);
+        @include transition-mix;
+
+        width: 0;
+        height: 0;
+
+        border: $eff15-helper-dimensions-half solid transparent;
+
+        &--top {
+          top: 0;
+        }
+
+        &--bottom {
+          bottom: 0;
+        }
+      }
+    }
+
+    //effects styles
+    &:focus,
+    &.is-active {
+      border-style: dotted;
+
+      & + label {
+        background:$eff15-accent-color;
+        color: $eff15-focus-color;
+
+        padding-left: 0;
+
+        .foxholder-form__helper {
+
+          &--top {
+            border-left-color: $eff15-accent-color;
+            border-top-color: $eff15-accent-color;
+          }
+
+          &--bottom {
+            border-left-color: $eff15-accent-color;
+            border-bottom-color: $eff15-accent-color;
+          }
+        }
+      }
+    }
+  }
+}

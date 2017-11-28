@@ -1,0 +1,27 @@
+//variables
+$eff4-accent-color: $accent-color-1;
+$eff4-focus-color: $light-settings-color;
+
+//effect 4 styles
+
+.foxholder-form {
+
+  &__input--effect-4,
+  &__textarea--effect-4 {
+    
+    //basic styles
+    & + label {
+      @include transition-mix;
+    }
+
+    //effects styles
+    &:focus,
+    &.is-active {
+
+      & + label {
+        background-color: $eff4-accent-color;
+        color: $eff4-focus-color;
+      }
+    }
+  }
+}

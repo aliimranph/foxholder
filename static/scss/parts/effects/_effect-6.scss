@@ -1,0 +1,31 @@
+//variables
+$eff6-accent-color: $accent-color-3;
+
+$eff6-input-textarea-border-radius: 5px;
+
+//effect 6 styles
+
+.foxholder-form {
+
+	&__input--effect-6,
+	&__textarea--effect-6 {
+		@include transition-mix;
+		
+		//basic styles
+		& + label {
+			@include transition-mix;
+		}
+
+		//effects styles
+		&:focus,
+		&.is-active {
+			border-color: $eff6-accent-color;
+			border-radius: $eff6-input-textarea-border-radius;
+
+			& + label {
+				left: 80px;
+				opacity: 0;
+			}
+		}
+	}
+}
