@@ -1,4 +1,4 @@
-# Foxholder v.1.0.1
+# Foxholder v.2.0.0
 Pack of 15 unique placeholder animations. Just pick the demo you like most and install on your website in 1 minute!
 
 ## View Demo
@@ -16,11 +16,9 @@ Pack of 15 unique placeholder animations. Just pick the demo you like most and i
 
 - Put basic HTML markup:
 ```html
-<div class="your-class">
-  <form>
-    .... your inputs and textareas and your submit button (use only <button> tag for it)
-  </form>
-</div>
+<form class="your-class">
+  .... your inputs and textareas and your submit button (use only <button> tag for it)
+</form>
 ```
 
 - Use **placeholder attribute** and **id attribute** for inputs and textareas. **_Note! Use only `<button>` tag for submit buttons_**
