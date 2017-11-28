@@ -24,19 +24,19 @@ Pack of 15 unique placeholder animations. Just pick the demo you like most and i
 - Use **placeholder attribute** and **id attribute** for inputs and textareas. **_Note! Use only `<button>` tag for submit buttons_**
 
 ```html
-<div class="your-class">
+<form class="your-class">
     <input id="your-id-1" type="text" placeholder="My Input" />
     <textarea id="your-id-2" placeholder="My Textarea"></textarea>
     <button type="submit">Submit</button>
-</div>
+</form>
 ```
-- Add foxholder-styles.css in your `<head>`
+- Add foxholder-styles.css (from the **src** folder) in your `<head>`
 
 ```html
 <link rel="stylesheet" href="css/foxholder-styles.css" />
 ```
 
-- Add foxholder.js in your `<head>` or before closing `<body>` tag after jQuery
+- Add foxholder.min.js from **src** folder (or foxholder.js if you need a developer version) before closing `<body>` tag after jQuery init:
 
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
