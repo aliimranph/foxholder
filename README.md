@@ -1,4 +1,4 @@
-# Foxholder v.2.0.1
+# Foxholder v.2.1.1
 Pack of 15 unique placeholder animations. Just pick the demo you like most and install on your website in 1 minute!
 
 ## View Demo
