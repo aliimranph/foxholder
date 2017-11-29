@@ -6,45 +6,45 @@ $eff7-icon-height-half: 15px;
 
 .foxholder-form {
 
-	//icon styles
-	&__icon--effect-7 {
-		@include position-absolute($top: 0, $left: 0);
+  //icon styles
+  &__icon--effect-7 {
+    @include position-absolute($top: 0, $left: 0);
+    transition: opacity .4s linear 0s, top .2s linear .2s, transform .2s linear .2s;
 
-		height: 0;
-  	width: 0;
+    height: 0;
+    width: 0;
 
-  	transform: translateY(0%);
+    transform: translateY(0%);
+    opacity: 0;
 
-  	border: $eff7-icon-height-half solid transparent;
-  	border-left: $eff7-icon-width-half solid transparent;
-	}
+    border: $eff7-icon-height-half solid transparent;
+    border-left: $eff7-icon-width-half solid $input-textarea-border-color;
+  }
 
-	&__input--effect-7,
-	&__textarea--effect-7 {
-		
-		//basic styles
-		& + label {
-			@include transition-mix;
-		}
+  &__input--effect-7,
+  &__textarea--effect-7 {
+    
+    //basic styles
+    & + label {
+      @include transition-mix;
+    }
 
-		//effects styles
-		&:focus,
-		&.is-active {
-			padding-left: 43px;
+    //effects styles
+    &:focus,
+    &.is-active {
+      padding-left: 43px;
 
-			& + label {
-			  transform: scale(0.3);
-			  transform-origin: left center;
-			  opacity: 0;
-			}
+      & + label {
+        transform: scale(0.3);
+        transform-origin: left center;
+        opacity: 0;
+      }
 
-			& ~ div {
-				transition: border-left-color .4s linear 0s, top .2s linear .2s, transform .2s linear .2s;
-				
-				top: 50%;
-				transform: translateY(-50%);
-				border-left-color: $input-textarea-border-color;
-			}
-		}
-	}
+      & ~ div {
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 1;
+      }
+    }
+  }
 }
