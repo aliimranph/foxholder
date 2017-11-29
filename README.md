@@ -1,4 +1,4 @@
-# Foxholder v.2.0.0
+# Foxholder v.2.0.1
 Pack of 15 unique placeholder animations. Just pick the demo you like most and install on your website in 1 minute!
 
 ## View Demo
@@ -10,7 +10,7 @@ Pack of 15 unique placeholder animations. Just pick the demo you like most and i
 1. Smooth and professional-looking CSS3 animations for placeholder
 2. 15 unique effects
 3. Easy to install
-4. Crossbrowser Effects (IE 9+, Safari 9+, FF, Opera, Chrome, Edge)
+4. Crossbrowser Effects (IE 10+, Safari 9+, FF, Opera, Chrome, Edge)
 
 ## How to Use
 
