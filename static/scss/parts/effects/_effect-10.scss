@@ -7,48 +7,49 @@ $eff10-label-offset: 30px;
 
 .foxholder-form {
 
-	&__input--effect-10,
-	&__textarea--effect-10 {
-		@include transition-mix($duration: .3s);
-		
-		//basic styles
-		& + label {
-			@include transition-mix($duration: .3s);
-		}
+  &__input--effect-10,
+  &__textarea--effect-10 {
+    @include transition-mix($duration: .3s);
+    
+    //basic styles
+    & + label {
+      @include transition-mix($duration: .3s);
+    }
 
-		//effects styles
-		&:focus,
-		&.is-active {
-			padding: $input-textarea-padding $input-textarea-padding*2;
+    //effects styles
+    &:focus,
+    &.is-active {
+      padding: $input-textarea-padding $input-textarea-padding*2;
 
-			border-radius: 40px;
-			border-style: dashed;
+      border-radius: 40px;
+      border-style: dashed;
 
-			& + label {
-				left: $eff10-label-offset;
+      & + label {
+        left: $eff10-label-offset;
 
-				span {
-					padding: 0 $label-padding-horz;
-					background-color: $eff10-label-bg-color;
-				}
-			}
-		}
-	}
+        span {
+          padding: 0 $label-padding-horz;
+          background-color: $eff10-label-bg-color;
+        }
+      }
+    }
+  }
 
-	&__textarea--effect-10 {
+  &__textarea--effect-10 {
 
-		&:focus,
-		&.is-active {
-			padding: $input-textarea-padding*2 $input-textarea-padding*2;
+    & + label {
+      padding: $label-padding-vert 0;
 
-			& + label {
+      span {
+        padding: 0 $label-padding-horz;
+      }
+    }
 
-				span {
-					padding: $label-padding-vert $label-padding-horz;
-				}
-			}
-		}
-	}
+    &:focus,
+    &.is-active {
+      padding: $input-textarea-padding*2 $input-textarea-padding*2;
+    }
+  }
 }
 
-					
+          

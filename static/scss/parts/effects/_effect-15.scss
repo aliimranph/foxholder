@@ -19,22 +19,26 @@ $eff15-label-padding-horz: 15px;
 
       padding-left: $eff15-label-padding-horz;
 
-      .foxholder-form__helper {
+      &:before, 
+      &:after {
         @include position-absolute ($right: - $eff15-helper-dimensions-half*2);
         @include transition-mix;
+
+        content: '';
+        display: block;
 
         width: 0;
         height: 0;
 
         border: $eff15-helper-dimensions-half solid transparent;
+      }
 
-        &--top {
-          top: 0;
-        }
+      &:before {
+        top: 0;
+      }
 
-        &--bottom {
-          bottom: 0;
-        }
+      &:after {
+        bottom: 0;
       }
     }
 
@@ -49,17 +53,17 @@ $eff15-label-padding-horz: 15px;
 
         padding-left: 0;
 
-        .foxholder-form__helper {
+        &:before,
+        &:after {
+          border-left-color: $eff15-accent-color;
+        }
+            
+        &:before {
+          border-top-color: $eff15-accent-color;
+        }
 
-          &--top {
-            border-left-color: $eff15-accent-color;
-            border-top-color: $eff15-accent-color;
-          }
-
-          &--bottom {
-            border-left-color: $eff15-accent-color;
-            border-bottom-color: $eff15-accent-color;
-          }
+        &:after {
+          border-bottom-color: $eff15-accent-color;
         }
       }
     }
