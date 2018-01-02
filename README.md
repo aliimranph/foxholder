@@ -48,11 +48,6 @@
   Button Demo #2 data-direction attributes
   ------------ | -------------
   **data-direction="left"** or no data-direction attribute | Button Demo #2 **Left** effect
-  
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
 
 - Add foxholder-styles.css (from the **src** folder) in your `<head>`
 
