@@ -44,6 +44,11 @@
   - use **data-filled="filled" attribute** to create a filled button (it's of 'empty' style by default)
   
   - use **data-direction attribute** to add an effect direction **_(Only for #2 and #3 Button Demo)_**:
+  
+  Button Demo #2 data-direction attributes
+  ------------ | -------------
+  **data-direction="left"**
+  or no data-direction attribute | Button Demo #2 **Left** effect
 
 - Add foxholder-styles.css (from the **src** folder) in your `<head>`
 
