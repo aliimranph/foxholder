@@ -1,0 +1,38 @@
+//variables
+$eff6-btn-rotate-angle: 25deg;
+
+//button effect 6
+.foxholder-form__button {
+
+  &--effect-6 {
+  	transform-origin: center center;
+  	transform: rotate(0deg);
+
+  	@keyframes rotation-animation {
+			
+			0% {
+				transform: rotate(0deg);
+			}
+
+			25% {
+				transform: rotate($eff6-btn-rotate-angle);
+			}
+
+			50% {
+				transform: rotate(0deg);
+			}
+
+			75% {
+				transform: rotate(-$eff6-btn-rotate-angle);
+			}
+
+			100% {
+				transform: rotate(0deg);
+			}
+  	}
+
+    &:hover {
+      animation: rotation-animation .3s linear 0s 1;
+    }
+  }
+}

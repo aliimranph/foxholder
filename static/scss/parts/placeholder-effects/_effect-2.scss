@@ -25,6 +25,7 @@ $eff2-label-offset-horz: 6px;
 			border-bottom-color: $eff2-accent-color;
 
 			& + label {
+				top: -($input-textarea-padding + 7);
 				left: -$eff2-label-offset-horz;
 
 				font: {

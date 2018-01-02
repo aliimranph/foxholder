@@ -21,6 +21,7 @@ $eff9-focus-color: $light-settings-color;
 
 		& ~ div {
 			@include position-absolute($top: 0);
+			@include transition-mix;
 			background-color: $eff9-accent-color;
 		}
 
@@ -34,7 +35,6 @@ $eff9-focus-color: $light-settings-color;
 			}
 
 			& ~ div {
-				@include transition-mix;
 				left: 0 !important;
 			}
 		}

@@ -1,10 +1,16 @@
 //variables
 $form-btn-border-color: $basic-settings-color;
 $form-btn-bg-color: $default-bg-color;
+$form-btn-bg-color-filled: $basic-settings-color;
 $form-btn-font-color:  $basic-settings-color;
+$form-btn-font-color-filled:  $light-settings-color;
 
-$form-btn-padding-vert: 10px;
-$form-btn-padding-horz: 20px;
+$form-btn-padding-vert-small: 7px;
+$form-btn-padding-horz-small: 22px;
+$form-btn-padding-vert: 12px;
+$form-btn-padding-horz: 27px;
+$form-btn-padding-vert-big: 15px;
+$form-btn-padding-horz-big: 37px;
 $form-btn-border-r: 4px;
 
 //forxholder button styles
@@ -25,5 +31,38 @@ $form-btn-border-r: 4px;
 
     outline: none;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    //sizes
+    &--small {
+      padding: $form-btn-padding-vert-small $form-btn-padding-horz-small;
+
+      font: {
+        size: 1.5rem;
+      }
+    }
+
+    &--medium {
+      padding: $form-btn-padding-vert $form-btn-padding-horz;
+
+      font: {
+        size: 1.8rem;
+      }
+    }
+
+    &--big {
+      padding: $form-btn-padding-vert-big $form-btn-padding-horz-big;
+
+      font: {
+        size: 2.1rem;
+      }
+    }
+
+    //filled state
+    &--filled {
+      color: $form-btn-font-color-filled;
+      background-color: $form-btn-bg-color-filled;
+    }
   }
 }

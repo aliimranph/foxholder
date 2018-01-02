@@ -93,9 +93,45 @@ h2 {
 .form-container,
 .how-to-use,
 .get-it-now,
-.contact-me-now {
+.contact-me-now,
+main>.row:nth-child(2) {
   padding: 50px 0px;
   border-top: 1px solid #222;
+}
+
+.form-container--buttons form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+form p {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.form-container--buttons button {
+  margin-bottom: 15px;
+}
+
+.form-container:first-child {
+  border-top: none !important;
+}
+
+.features-list {
+  max-width: 540px;
+  margin: 30px auto 0;
+}
+
+.features-list span {
+  letter-spacing: 0px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #f04c1e;
+  text-transform: uppercase;
+  margin-left: 5px;
 }
 
 form {
@@ -144,4 +180,22 @@ footer {
   margin-top: 50px;
   padding: 20px 0px;
   border-top: 1px solid #222;
+}
+
+table {
+  margin-top: 30px;
+}
+
+table.m-bottom {
+  margin-bottom: 30px;
+}
+
+table th {
+  text-align: center;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid;
 }

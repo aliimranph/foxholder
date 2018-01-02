@@ -1,0 +1,169 @@
+//variables
+$eff2-btn-hover-color: $light-settings-color;
+$eff2-btn-hover-bg: $basic-settings-color;
+
+//button effect 2
+.foxholder-form__button {
+
+  &--effect-2 {
+    // @include transition-mix;
+  	background-color: transparent;
+    
+    //basic styles
+  	&:after {
+  		@include position-absolute;
+
+  		content: '';
+  		display: block;
+  		width: 100%;
+  		height: 100%;
+
+  		z-index: -1;
+
+  		background-color: $eff2-btn-hover-bg;
+  	}
+
+    &.foxholder-form__button--filled {
+
+      &:after {
+        @include position-absolute;
+      }
+
+      &:hover {
+        color: $form-btn-font-color;
+      }
+    }
+
+    &:hover {
+      color: $eff2-btn-hover-color;
+    }
+
+    //from left styles
+    &-left {
+
+      &:after {
+        @include transition-mix;
+        top: 0;
+        left: -100%;
+      }
+
+      &.foxholder-form__button--filled {
+
+        &:after {
+          top: 0;
+          left: 0;
+        }
+
+        &:hover {
+
+          &:after {
+            left: -100%;
+          }
+        }
+      }
+
+      &:hover {
+
+        &:after {
+          left: 0;
+        }
+      }
+    }
+
+    //from right styles
+    &-right {
+
+      &:after {
+        @include transition-mix;
+        top: 0;
+        left: 100%;
+      }
+
+      &.foxholder-form__button--filled {
+
+        &:after {
+          top: 0;
+          left: 0;
+        }
+
+        &:hover {
+
+          &:after {
+            left: 100%;
+          }
+        }
+      }
+
+      &:hover {
+
+        &:after {
+          left: 0;
+        }
+      }
+    }
+
+    //from top styles
+    &-top {
+
+      &:after {
+        @include transition-mix;
+        top: -100%;
+        left: 0;
+      }
+
+      &.foxholder-form__button--filled {
+
+        &:after {
+          top: 0;
+          left: 0;
+        }
+
+        &:hover {
+
+          &:after {
+            top: -100%;
+          }
+        }
+      }
+
+      &:hover {
+
+        &:after {
+          top: 0;
+        }
+      }
+    }
+
+    //from bottom styles
+    &-bottom {
+
+      &:after {
+        @include transition-mix;
+        top: 100%;
+        left: 0;
+      }
+
+      &.foxholder-form__button--filled {
+
+        &:after {
+          top: 0;
+          left: 0;
+        }
+
+        &:hover {
+
+          &:after {
+            top: 100%;
+          }
+        }
+      }
+
+      &:hover {
+
+        &:after {
+          top: 0;
+        }
+      }
+    }
+  }
+}

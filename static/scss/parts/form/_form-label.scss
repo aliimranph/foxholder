@@ -24,6 +24,7 @@ $label-padding-vert: $input-textarea-padding;
     background-color: transparent;
 
     span {
+      display: inline-block;
       padding: 0 $label-padding-horz;
     }
   }

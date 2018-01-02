@@ -1,0 +1,14 @@
+//variables
+$eff5-btn-border-r: 50px;
+
+//button effect 5
+.foxholder-form__button {
+
+  &--effect-5 {
+    @include transition-mix($duration: .35s);
+
+    &:hover {
+      border-radius: $eff5-btn-border-r;
+    }
+  }
+}
