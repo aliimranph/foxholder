@@ -47,8 +47,7 @@
   
   Button Demo #2 data-direction attributes
   ------------ | -------------
-  **data-direction="left"**
-  or no data-direction attribute | Button Demo #2 **Left** effect
+  **data-direction="left"** or no data-direction attribute | Button Demo #2 **Left** effect
 
 - Add foxholder-styles.css (from the **src** folder) in your `<head>`
 
