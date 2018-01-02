@@ -24,7 +24,7 @@
 </form>
 ```
 
-- Use **placeholder attribute** and **id attribute** for inputs and textareas. **_also you can use input with type="submit" as a button_**
+- Use **placeholder attribute** and **id attribute** for inputs and textareas. **_Also you can use input with type="submit" as a button_**
 
 ```html
 <form class="your-class">
@@ -50,6 +50,7 @@
 
 ```js
  jQuery('.your-class').foxholder({
-    demo: 1 //or other number of demo (1-15) you want to use
+    placeholderDemo: 1, // for placeholder demo (1 - 15)
+    buttonDemo: 1 //for button demos (1 - 6), if you need a button effect
   });
 ```
