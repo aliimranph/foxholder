@@ -45,7 +45,7 @@
   
   - use **data-direction attribute** to add an effect direction **_(Only for #2 and #3 Button Demo)_**:
   
- data-direction attr | effect
+ data-direction attr value | Effect Direction
  ------------ | -------------
  **data-direction="left"** or no data-direction attribute | Button Demo #2 **Left** effect
 
