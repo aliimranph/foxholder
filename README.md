@@ -24,7 +24,7 @@
 </form>
 ```
 
-- Use **placeholder attribute** and **id attribute** for inputs and textareas. **_Note! Use only `<button>` tag for submit buttons_**
+- Use **placeholder attribute** and **id attribute** for inputs and textareas. **_also you can use input with type="submit" as a button_**
 
 ```html
 <form class="your-class">
