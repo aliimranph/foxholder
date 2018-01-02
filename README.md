@@ -38,6 +38,8 @@
   - use **data-size attribute** to customize a button size (by default it's **middle**):
   
     - **data-size="sm"** - a small button
+    - **data-size="md"** - a middle button
+    - **data-size="bg"** - a big button
 
 - Add foxholder-styles.css (from the **src** folder) in your `<head>`
 
