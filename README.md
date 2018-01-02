@@ -40,6 +40,10 @@
     - **data-size="sm"** - a small button
     - **data-size="md"** - a middle button
     - **data-size="bg"** - a big button
+    
+  - use **data-filled="filled" attribute** to create a filled button (it's of 'empty' style by default)
+  
+  - use **data-direction attribute** to add an effect direction **_(Only for #2 and #3 Button Demo)_**:
 
 - Add foxholder-styles.css (from the **src** folder) in your `<head>`
 
