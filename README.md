@@ -45,9 +45,19 @@
   
   - use **data-direction attribute** to add an effect direction **_(Only for #2 and #3 Button Demo)_**:
   
- data-direction attr value | Effect Direction
+ data-direction attr value for Button Demo #2 | Effect Direction
  ------------ | -------------
  **data-direction="left"** or no data-direction attribute | Button Demo #2 **Left** effect
+ **data-direction="right"** | Button Demo #2 **Right** effect
+ **data-direction="top"** | Button Demo #2 **Top** effect
+ **data-direction="bottom"** | Button Demo #2 **Bottom** effect
+ 
+  data-direction attr value for Button Demo #3 | Effect Direction
+ ------------ | -------------
+ **data-direction="vertical"** or no data-direction attribute | Button Demo #3 **Vertical** effect
+ **data-direction="horizontal"** | Button Demo #3 **Horizontal** effect
+ **data-direction="horz-vert"** | Button Demo #3 **Horizontal and Vertical** effect
+ **data-direction="diagonal"** | Button Demo #3 **Diagonal** effect
 
 - Add foxholder-styles.css (from the **src** folder) in your `<head>`
 
