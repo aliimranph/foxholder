@@ -61,39 +61,39 @@ jQuery('document').ready(function() {
   });
 
   jQuery('.form-container--effect-21 form').foxholder({
-    
+
     buttonDemo: 1
 
   });
 
   jQuery('.form-container--effect-22 form').foxholder({
-    
+
     buttonDemo: 2
 
   });
 
-  jQuery('.form-container--effect-23 form').foxholder({
-    
-    buttonDemo: 3
+    jQuery('.form-container--effect-23 form').foxholder({
 
-  });
+        buttonDemo: 3
 
-  jQuery('.form-container--effect-24 form').foxholder({
-    
-    buttonDemo: 4
+    });
 
-  });
+    jQuery('.form-container--effect-24 form').foxholder({
 
-  jQuery('.form-container--effect-25 form').foxholder({
-    
-    buttonDemo: 5
+        buttonDemo: 4
 
-  });
+    });
 
-  jQuery('.form-container--effect-26 form').foxholder({
-    
-    buttonDemo: 6
+    jQuery('.form-container--effect-25 form').foxholder({
 
-  });
+        buttonDemo: 5
+
+    });
+
+    jQuery('.form-container--effect-26 form').foxholder({
+
+        buttonDemo: 6
+
+    });
 
 });
