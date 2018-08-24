@@ -58,6 +58,13 @@
  **data-direction="horizontal"** | Button Demo #3 **Horizontal** effect
  **data-direction="horz-vert"** | Button Demo #3 **Horizontal and Vertical** effect
  **data-direction="diagonal"** | Button Demo #3 **Diagonal** effect
+ 
+ **Helps to create small filled button with a Horizontal and Vertical direction of Button Demo #3:**
+ ```html
+<form class="your-class">
+  <button type="submit" data-size="sm" data-filled="filled" data-direction="horz-vert">Submit<button>
+</form>
+```
 
 - Add foxholder-styles.css (from the **src** folder) in your `<head>`
 
