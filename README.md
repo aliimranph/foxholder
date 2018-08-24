@@ -1,7 +1,7 @@
-# Foxholder v.3.0.0
+# Foxholder v.3.1.0
 
 - Placeholder Animations (input and textareas) - 15 unique demos!
-- Button animations **NEW! - 6 nice demos!**
+- Button animations
 
 ## View Demo
 
@@ -66,7 +66,7 @@
 </form>
 ```
 
-- Add foxholder-styles.css (from the **src** folder) in your `<head>`
+- Add foxholder.min.css (from the **src** folder) in your `<head>`
 
 ```html
 <link rel="stylesheet" href="css/foxholder-styles.css" />
@@ -76,7 +76,7 @@
 
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="scripts/foxholder.js"></script>
+<script src="scripts/foxholder.min.js"></script>
 ```
 
 - Initialize your Foxholder in your script file or an inline script tag
