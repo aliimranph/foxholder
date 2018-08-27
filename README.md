@@ -1,7 +1,7 @@
-# Foxholder v.3.1.0
+# Foxholder v.3.2.0
 
 - Placeholder Animations (input and textareas) - 15 unique demos!
-- Button animations
+- Button animations - 8 demos (**2 new demos added in 3.2.0**)
 
 ## View Demo
 
@@ -11,7 +11,7 @@
 
 1. Smooth and professional-looking CSS3 animations for placeholder
 2. 15 unique placeholder effects
-3. 6 button hover effects
+3. 8 button hover effects
 4. Easy to install
 5. Crossbrowser Effects (IE 10+, Safari 9+, FF, Opera, Chrome, Edge)
 
@@ -20,7 +20,7 @@
 - Put basic HTML markup:
 ```html
 <form class="your-class">
-  .... your inputs and textareas and your submit button (use only <button> tag for it)
+  .... your inputs and textareas and your submit button
 </form>
 ```
 
@@ -40,36 +40,20 @@
     - **data-size="sm"** - a small button
     - **data-size="md"** - a middle button
     - **data-size="bg"** - a big button
-    
-  - use **data-filled="filled" attribute** to create a filled button (it's of 'empty' style by default)
   
-  - use **data-direction attribute** to add an effect direction **_(Only for #2 and #3 Button Demo)_**:
-  
- data-direction attr value for Button Demo #2 | Effect Direction
- ------------ | -------------
- **data-direction="left"** or no data-direction attribute | Button Demo #2 **Left** effect
- **data-direction="right"** | Button Demo #2 **Right** effect
- **data-direction="top"** | Button Demo #2 **Top** effect
- **data-direction="bottom"** | Button Demo #2 **Bottom** effect
+  - use **data-effect-parameter** attribute to add an attribute for effect like direction (**only for demos with multiple variants, like Demo #2**). Proper **data-effect-parameter** you can find in the parentheses near the demo variant name. If you don't specify **data-effect-parameter**, the default variant will be applied.
  
-  data-direction attr value for Button Demo #3 | Effect Direction
- ------------ | -------------
- **data-direction="vertical"** or no data-direction attribute | Button Demo #3 **Vertical** effect
- **data-direction="horizontal"** | Button Demo #3 **Horizontal** effect
- **data-direction="horz-vert"** | Button Demo #3 **Horizontal and Vertical** effect
- **data-direction="diagonal"** | Button Demo #3 **Diagonal** effect
- 
- **Helps to create small filled button with a Horizontal and Vertical direction of Button Demo #3:**
+ **Helps to create small button with a Horizontal and Vertical direction of Button Demo #3:**
  ```html
 <form class="your-class">
-  <button type="submit" data-size="sm" data-filled="filled" data-direction="horz-vert">Submit<button>
+  <button type="submit" data-size="sm" data-effect-parameter="horzVert">Submit<button>
 </form>
 ```
 
 - Add foxholder.min.css (from the **src** folder) in your `<head>`
 
 ```html
-<link rel="stylesheet" href="css/foxholder-styles.css" />
+<link rel="stylesheet" href="css/foxholder.min.css" />
 ```
 
 - Add foxholder.min.js from **src** folder (or foxholder.js if you need a developer version) before closing `<body>` tag after jQuery init:
@@ -84,6 +68,6 @@
 ```js
  jQuery('.your-class').foxholder({
     placeholderDemo: 1, // for placeholder demo (1 - 15)
-    buttonDemo: 1 //for button demos (1 - 6), if you need a button effect
+    buttonDemo: 1 //for button demos (1 - 8), if you need a button effect
   });
 ```
