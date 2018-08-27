@@ -1,43 +1,98 @@
 //variables
-$eff7-btn-move-dimension: 10px;
-$eff7-icon-block-width: 30px;
+$eff7-btn-color: $light-settings-color;
+$eff7-btn-hover-color: $basic-settings-color;
+$eff7-btn-bg: $basic-settings-color;
+$eff7-btn-hover-bg: $light-settings-color;
+
+$eff7-element-offset: 7px;
 
 //button effect 7
-.foxholder-form__button {
+.foxholder-form__button--effect-7  {
+  @include transition-mix($delay: .2s);
 
-  &--effect-7 {
-    @include transition-mix;
+  color: $eff7-btn-color;
 
-    //icon element
-    &:after {
-      @include position-absolute($top: 0, $right: 0);
-      @include transition-mix;
+  border-color: transparent;
+  background-color: $eff7-btn-bg;
 
-      content: "\f178";
+  overflow: visible;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  //decorations styles
+  &:before,
+  &:after {
+	@include transition-mix();
+	@include position-absolute($left: 0);
 
-      height: 100%;
-      width: $eff7-icon-block-width;
-      opacity: 0;
+	display: block;
+	width: 100%;
+	height: 2px;
 
-      font: {
-        family: FontAwesome;
-        size: inherit;
-      }
+	content: '';
 
-      line-height: inherit;
-    }
+	background-color: $eff6-btn-bg;
 
-    &:hover {
-      text-indent: - $eff7-icon-block-width/2;
+	opacity: 0;
+	visibility: hidden;
+  }
 
-      &:after {
-        opacity: 1;
-        text-indent: 0;
-      }
-    }
+  &:hover {
+	@include transition-mix();
+	color: $eff7-btn-hover-color;
+
+	background-color: $eff7-btn-hover-bg;
+
+	&:before,
+	&:after {
+	  @include transition-mix($delay: .2s);
+
+	  opacity: 1;
+	  visibility: visible;
+	}
+  }
+}
+
+//inside effect
+.foxholder-form__button--effect-7-inside,
+.foxholder-form__button--effect-7-default{
+
+  &:before {
+	top: (- $eff7-element-offset);
+  }
+
+  &:after {
+	bottom: (- $eff7-element-offset);
+  }
+
+  &:hover {
+
+	&:before{
+	  top: 0;
+	}
+
+	&:after {
+	  bottom: 0;
+	}
+  }
+}
+
+.foxholder-form__button--effect-7-outside {
+
+  &:before {
+	top: $eff7-element-offset;
+  }
+
+  &:after {
+	bottom: $eff7-element-offset;
+  }
+
+  &:hover {
+
+	&:before{
+	  top: 0;
+	}
+
+	&:after {
+	  bottom: 0;
+	}
   }
 }

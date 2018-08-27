@@ -1,38 +1,121 @@
 //variables
-$eff6-btn-rotate-angle: 25deg;
+$eff6-btn-color: $light-settings-color;
+$eff6-btn-hover-color: $basic-settings-color;
+$eff6-btn-bg: $basic-settings-color;
+$eff6-btn-hover-bg: $light-settings-color;
 
 //button effect 6
-.foxholder-form__button {
+.foxholder-form__button--effect-6  {
+  @include transition-mix($delay: .2s);
 
-  &--effect-6 {
-  	transform-origin: center center;
-  	transform: rotate(0deg);
+  color: $eff6-btn-color;
 
-  	@keyframes rotation-animation {
-			
-			0% {
-				transform: rotate(0deg);
-			}
+  border-color: transparent;
+  background-color: $eff6-btn-bg;
 
-			25% {
-				transform: rotate($eff6-btn-rotate-angle);
-			}
+  //decorations styles
+  &:before,
+  &:after {
+    @include transition-mix();
+    @include position-absolute();
 
-			50% {
-				transform: rotate(0deg);
-			}
+    display: block;
+    width: 100%;
 
-			75% {
-				transform: rotate(-$eff6-btn-rotate-angle);
-			}
+    content: '';
+  }
 
-			100% {
-				transform: rotate(0deg);
-			}
-  	}
+  &:hover {
+    @include transition-mix();
+    color: $eff6-btn-hover-color;
 
-    &:hover {
-      animation: rotation-animation .3s linear 0s 1;
+    background-color: $eff6-btn-hover-bg;
+
+    &:before,
+    &:after {
+      @include transition-mix($delay: .2s);
+
+      transform: scale(1,1);
     }
+  }
+}
+
+//horizontal side direction
+.foxholder-form__button--effect-6-horz-side,
+.foxholder-form__button--effect-6-default{
+
+  &:before,
+  &:after {
+    height: 2px;
+
+    transform: scale(0,1);
+
+    background-color: $eff6-btn-bg;
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+
+    transform-origin: left center;
+  }
+
+  &:after {
+    bottom: 0;
+    right: 0;
+
+    transform-origin: right center;
+  }
+}
+
+//horizontal side direction
+.foxholder-form__button--effect-6-horz-center {
+
+  &:before,
+  &:after {
+    left: 0;
+
+    height: 2px;
+
+    transform: scale(0,1);
+    transform-origin: center;
+
+    background-color: $eff6-btn-bg;
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    bottom: 0;
+  }
+}
+
+//horizontal and vertical direction
+.foxholder-form__button--effect-6-horzVert {
+
+  &:before,
+  &:after {
+    left: 0;
+    top: 0;
+
+    height: 100%;
+
+    transform-origin: center;
+  }
+
+  &:before {
+    transform: scale(0,1);
+
+    border-top: 2px solid $eff6-btn-bg;
+    border-bottom: 2px solid $eff6-btn-bg;
+  }
+
+  &:after {
+    transform: scale(1,0);
+
+    border-left: 2px solid $eff6-btn-bg;
+    border-right: 2px solid $eff6-btn-bg;
   }
 }

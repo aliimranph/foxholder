@@ -99,17 +99,27 @@ main>.row:nth-child(2) {
   border-top: 1px solid #222;
 }
 
+.form-container--buttons {
+  width: 75%;
+  margin: auto;
+}
+
+.form-container--buttons:last-child {
+  padding-bottom: 0;
+}
+
 .form-container--buttons form {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 form p {
   width: 100%;
   flex-shrink: 0;
+  margin-bottom: 20px;
 }
 
 .form-container--buttons button {

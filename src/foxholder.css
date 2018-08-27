@@ -55,29 +55,28 @@
   padding: 15px 15px; }
 
 .foxholder-form__button {
-  padding: 12px 27px;
+  position: relative;
+  padding: 12px 35px;
   font-size: inherit;
   font-family: inherit;
   color: #222;
-  border: 1px solid #222;
-  border-radius: 4px;
+  border: 2px solid #222;
   background-color: #fff;
   outline: none;
   cursor: pointer;
-  position: relative;
   overflow: hidden; }
-  .foxholder-form__button--small {
-    padding: 7px 22px;
-    font-size: 1.5rem; }
-  .foxholder-form__button--medium {
-    padding: 12px 27px;
-    font-size: 1.8rem; }
-  .foxholder-form__button--big {
-    padding: 15px 37px;
-    font-size: 2.1rem; }
-  .foxholder-form__button--filled {
-    color: #fff;
-    background-color: #222; }
+
+.foxholder-form__button--small {
+  padding: 7px 28px;
+  font-size: 1.5rem; }
+
+.foxholder-form__button--medium {
+  padding: 12px 35px;
+  font-size: 1.8rem; }
+
+.foxholder-form__button--large {
+  padding: 13px 45px;
+  font-size: 2.1rem; }
 
 .foxholder-form__input--effect-1 + label, .foxholder-form__textarea--effect-1 + label {
   transition-property: all;
@@ -486,82 +485,66 @@
   .foxholder-form__button--effect-1:hover {
     color: #fff;
     background-color: #222; }
-  .foxholder-form__button--effect-1.foxholder-form__button--filled:hover {
-    color: #222;
-    background-color: #fff; }
 
 .foxholder-form__button--effect-2 {
-  background-color: transparent; }
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0); }
   .foxholder-form__button--effect-2:after {
     position: absolute;
-    content: '';
     display: block;
     width: 100%;
     height: 100%;
-    z-index: -1;
-    background-color: #222; }
-  .foxholder-form__button--effect-2.foxholder-form__button--filled:after {
-    position: absolute; }
-  .foxholder-form__button--effect-2.foxholder-form__button--filled:hover {
-    color: #222; }
+    content: '';
+    background-color: #222;
+    z-index: -1; }
   .foxholder-form__button--effect-2:hover {
     color: #fff; }
-  .foxholder-form__button--effect-2-left:after {
-    transition-property: all;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-    transition-delay: 0s;
-    top: 0;
-    left: -100%; }
-  .foxholder-form__button--effect-2-left.foxholder-form__button--filled:after {
-    top: 0;
-    left: 0; }
-  .foxholder-form__button--effect-2-left.foxholder-form__button--filled:hover:after {
-    left: -100%; }
-  .foxholder-form__button--effect-2-left:hover:after {
-    left: 0; }
-  .foxholder-form__button--effect-2-right:after {
-    transition-property: all;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-    transition-delay: 0s;
-    top: 0;
-    left: 100%; }
-  .foxholder-form__button--effect-2-right.foxholder-form__button--filled:after {
-    top: 0;
-    left: 0; }
-  .foxholder-form__button--effect-2-right.foxholder-form__button--filled:hover:after {
-    left: 100%; }
-  .foxholder-form__button--effect-2-right:hover:after {
-    left: 0; }
-  .foxholder-form__button--effect-2-top:after {
-    transition-property: all;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-    transition-delay: 0s;
-    top: -100%;
-    left: 0; }
-  .foxholder-form__button--effect-2-top.foxholder-form__button--filled:after {
-    top: 0;
-    left: 0; }
-  .foxholder-form__button--effect-2-top.foxholder-form__button--filled:hover:after {
-    top: -100%; }
-  .foxholder-form__button--effect-2-top:hover:after {
-    top: 0; }
-  .foxholder-form__button--effect-2-bottom:after {
-    transition-property: all;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-    transition-delay: 0s;
-    top: 100%;
-    left: 0; }
-  .foxholder-form__button--effect-2-bottom.foxholder-form__button--filled:after {
-    top: 0;
-    left: 0; }
-  .foxholder-form__button--effect-2-bottom.foxholder-form__button--filled:hover:after {
-    top: 100%; }
-  .foxholder-form__button--effect-2-bottom:hover:after {
-    top: 0; }
+
+.foxholder-form__button--effect-2-left:after,
+.foxholder-form__button--effect-2-default:after {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  top: 0;
+  left: -100%; }
+
+.foxholder-form__button--effect-2-left:hover:after,
+.foxholder-form__button--effect-2-default:hover:after {
+  left: 0; }
+
+.foxholder-form__button--effect-2-right:after {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  top: 0;
+  left: 100%; }
+
+.foxholder-form__button--effect-2-right:hover:after {
+  left: 0; }
+
+.foxholder-form__button--effect-2-top:after {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  top: -100%;
+  left: 0; }
+
+.foxholder-form__button--effect-2-top:hover:after {
+  top: 0; }
+
+.foxholder-form__button--effect-2-bottom:after {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  top: 100%;
+  left: 0; }
+
+.foxholder-form__button--effect-2-bottom:hover:after {
+  top: 0; }
 
 .foxholder-form__button--effect-3 {
   -webkit-transform: translateZ(0);
@@ -570,18 +553,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    content: '';
     display: block;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    content: '';
     -webkit-transform-origin: center center;
             transform-origin: center center;
-    background-color: #222; }
-  .foxholder-form__button--effect-3.foxholder-form__button--filled:after {
-    background-color: #fff; }
-  .foxholder-form__button--effect-3.foxholder-form__button--filled:hover {
-    color: #222; }
+    background-color: #222;
+    z-index: -1; }
   .foxholder-form__button--effect-3:hover {
     color: #fff; }
     .foxholder-form__button--effect-3:hover:after {
@@ -589,133 +568,262 @@
       transition-duration: 0.2s;
       transition-timing-function: linear;
       transition-delay: 0s; }
-  .foxholder-form__button--effect-3-vert:after {
-    -webkit-transform: scale(0, 1);
-            transform: scale(0, 1); }
-  .foxholder-form__button--effect-3-vert:hover:after {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); }
-  .foxholder-form__button--effect-3-horz:after {
-    -webkit-transform: scale(1, 0);
-            transform: scale(1, 0); }
-  .foxholder-form__button--effect-3-horz:hover:after {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); }
-  .foxholder-form__button--effect-3-horzVert:after {
-    -webkit-transform: scale(0);
-            transform: scale(0); }
-  .foxholder-form__button--effect-3-horzVert:hover:after {
-    -webkit-transform: scale(1);
-            transform: scale(1); }
-  .foxholder-form__button--effect-3-diagonal:after {
-    top: 50%;
-    left: 50%;
-    height: 300%;
-    width: 300%;
-    -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(0);
-            transform: translate(-50%, -50%) rotate(45deg) scale(0); }
-  .foxholder-form__button--effect-3-diagonal:hover:after {
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: linear;
-    transition-delay: 0s;
-    -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1);
-            transform: translate(-50%, -50%) rotate(45deg) scale(1); }
+
+.foxholder-form__button--effect-3-vert:after,
+.foxholder-form__button--effect-3-default:after {
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1); }
+
+.foxholder-form__button--effect-3-vert:hover:after,
+.foxholder-form__button--effect-3-default:hover:after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1); }
+
+.foxholder-form__button--effect-3-horz:after {
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0); }
+
+.foxholder-form__button--effect-3-horz:hover:after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1); }
+
+.foxholder-form__button--effect-3-horzVert:after {
+  -webkit-transform: scale(0);
+          transform: scale(0); }
+
+.foxholder-form__button--effect-3-horzVert:hover:after {
+  -webkit-transform: scale(1);
+          transform: scale(1); }
+
+.foxholder-form__button--effect-3-diagonal:after {
+  top: 50%;
+  left: 50%;
+  height: 300%;
+  width: 300%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+          transform: translate(-50%, -50%) rotate(45deg) scale(0); }
+
+.foxholder-form__button--effect-3-diagonal:hover:after {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1);
+          transform: translate(-50%, -50%) rotate(45deg) scale(1); }
 
 .foxholder-form__button--effect-4 {
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: linear;
   transition-delay: 0s; }
-  .foxholder-form__button--effect-4.foxholder-form__button--filled:hover {
-    box-shadow: inset 0px 0px 10px 30px #fff;
-    color: #222; }
   .foxholder-form__button--effect-4:hover {
-    box-shadow: inset 0px 0px 10px 30px #222;
-    color: #fff; }
+    color: #fff;
+    box-shadow: inset 0px 0px 10px 30px #222; }
 
 .foxholder-form__button--effect-5 {
-  transition-property: all;
-  transition-duration: 0.35s;
-  transition-timing-function: linear;
-  transition-delay: 0s; }
-  .foxholder-form__button--effect-5:hover {
-    border-radius: 50px; }
+  overflow: visible; }
+  .foxholder-form__button--effect-5:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+    content: attr(data-effect-parameter);
+    text-align: center;
+    color: #fff;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    background-color: #222;
+    opacity: 0;
+    visibility: hidden; }
+  .foxholder-form__button--effect-5:hover:after {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    visibility: visible; }
 
 .foxholder-form__button--effect-6 {
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg); }
-
-@-webkit-keyframes rotation-animation {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  25% {
-    -webkit-transform: rotate(25deg);
-            transform: rotate(25deg); }
-  50% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  75% {
-    -webkit-transform: rotate(-25deg);
-            transform: rotate(-25deg); }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); } }
-
-@keyframes rotation-animation {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  25% {
-    -webkit-transform: rotate(25deg);
-            transform: rotate(25deg); }
-  50% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  75% {
-    -webkit-transform: rotate(-25deg);
-            transform: rotate(-25deg); }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); } }
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0.2s;
+  color: #fff;
+  border-color: transparent;
+  background-color: #222; }
+  .foxholder-form__button--effect-6:before, .foxholder-form__button--effect-6:after {
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    position: absolute;
+    display: block;
+    width: 100%;
+    content: ''; }
   .foxholder-form__button--effect-6:hover {
-    -webkit-animation: rotation-animation .3s linear 0s 1;
-            animation: rotation-animation .3s linear 0s 1; }
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    color: #222;
+    background-color: #fff; }
+    .foxholder-form__button--effect-6:hover:before, .foxholder-form__button--effect-6:hover:after {
+      transition-property: all;
+      transition-duration: 0.2s;
+      transition-timing-function: linear;
+      transition-delay: 0.2s;
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1); }
+
+.foxholder-form__button--effect-6-horz-side:before, .foxholder-form__button--effect-6-horz-side:after,
+.foxholder-form__button--effect-6-default:before,
+.foxholder-form__button--effect-6-default:after {
+  height: 2px;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  background-color: #222; }
+
+.foxholder-form__button--effect-6-horz-side:before,
+.foxholder-form__button--effect-6-default:before {
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: left center;
+          transform-origin: left center; }
+
+.foxholder-form__button--effect-6-horz-side:after,
+.foxholder-form__button--effect-6-default:after {
+  bottom: 0;
+  right: 0;
+  -webkit-transform-origin: right center;
+          transform-origin: right center; }
+
+.foxholder-form__button--effect-6-horz-center:before, .foxholder-form__button--effect-6-horz-center:after {
+  left: 0;
+  height: 2px;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  background-color: #222; }
+
+.foxholder-form__button--effect-6-horz-center:before {
+  top: 0; }
+
+.foxholder-form__button--effect-6-horz-center:after {
+  bottom: 0; }
+
+.foxholder-form__button--effect-6-horzVert:before, .foxholder-form__button--effect-6-horzVert:after {
+  left: 0;
+  top: 0;
+  height: 100%;
+  -webkit-transform-origin: center;
+          transform-origin: center; }
+
+.foxholder-form__button--effect-6-horzVert:before {
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  border-top: 2px solid #222;
+  border-bottom: 2px solid #222; }
+
+.foxholder-form__button--effect-6-horzVert:after {
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  border-left: 2px solid #222;
+  border-right: 2px solid #222; }
 
 .foxholder-form__button--effect-7 {
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: linear;
-  transition-delay: 0s; }
-  .foxholder-form__button--effect-7:after {
-    position: absolute;
-    top: 0;
-    right: 0;
+  transition-delay: 0.2s;
+  color: #fff;
+  border-color: transparent;
+  background-color: #222;
+  overflow: visible; }
+  .foxholder-form__button--effect-7:before, .foxholder-form__button--effect-7:after {
     transition-property: all;
     transition-duration: 0.2s;
     transition-timing-function: linear;
     transition-delay: 0s;
-    content: "\f178";
-    display: -webkit-flex;
-    display: -moz-box;
-    display: flex;
-    -webkit-align-items: center;
-       -moz-box-align: center;
-            align-items: center;
-    -webkit-justify-content: center;
-       -moz-box-pack: center;
-            justify-content: center;
-    height: 100%;
-    width: 30px;
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background-color: #222;
     opacity: 0;
-    font-family: FontAwesome;
-    font-size: inherit;
-    line-height: inherit; }
+    visibility: hidden; }
   .foxholder-form__button--effect-7:hover {
-    text-indent: -15px; }
-    .foxholder-form__button--effect-7:hover:after {
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    color: #222;
+    background-color: #fff; }
+    .foxholder-form__button--effect-7:hover:before, .foxholder-form__button--effect-7:hover:after {
+      transition-property: all;
+      transition-duration: 0.2s;
+      transition-timing-function: linear;
+      transition-delay: 0.2s;
       opacity: 1;
-      text-indent: 0; }
+      visibility: visible; }
+
+.foxholder-form__button--effect-7-inside:before,
+.foxholder-form__button--effect-7-default:before {
+  top: -7px; }
+
+.foxholder-form__button--effect-7-inside:after,
+.foxholder-form__button--effect-7-default:after {
+  bottom: -7px; }
+
+.foxholder-form__button--effect-7-inside:hover:before,
+.foxholder-form__button--effect-7-default:hover:before {
+  top: 0; }
+
+.foxholder-form__button--effect-7-inside:hover:after,
+.foxholder-form__button--effect-7-default:hover:after {
+  bottom: 0; }
+
+.foxholder-form__button--effect-7-outside:before {
+  top: 7px; }
+
+.foxholder-form__button--effect-7-outside:after {
+  bottom: 7px; }
+
+.foxholder-form__button--effect-7-outside:hover:before {
+  top: 0; }
+
+.foxholder-form__button--effect-7-outside:hover:after {
+  bottom: 0; }
+
+.foxholder-form__button--effect-8 {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  color: #fff;
+  border-color: transparent;
+  background-color: #222; }
+
+.foxholder-form__button--effect-8-sm:hover {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
+
+.foxholder-form__button--effect-8-md:hover,
+.foxholder-form__button--effect-8-default:hover {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3); }
+
+.foxholder-form__button--effect-8-lg:hover {
+  box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2); }

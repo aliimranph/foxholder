@@ -96,4 +96,16 @@ jQuery('document').ready(function() {
 
     });
 
+    jQuery('.form-container--effect-27 form').foxholder({
+
+        buttonDemo: 7
+
+    });
+
+    jQuery('.form-container--effect-28 form').foxholder({
+
+        buttonDemo: 8
+
+    });
+
 });

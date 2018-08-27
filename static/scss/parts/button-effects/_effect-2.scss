@@ -3,167 +3,98 @@ $eff2-btn-hover-color: $light-settings-color;
 $eff2-btn-hover-bg: $basic-settings-color;
 
 //button effect 2
-.foxholder-form__button {
+.foxholder-form__button--effect-2  {
+  transform: translateZ(0);
 
-  &--effect-2 {
-    // @include transition-mix;
-  	background-color: transparent;
-    
-    //basic styles
-  	&:after {
-  		@include position-absolute;
+  //basic styles
+  &:after {
+    @include position-absolute;
 
-  		content: '';
-  		display: block;
-  		width: 100%;
-  		height: 100%;
+    display: block;
+    width: 100%;
+    height: 100%;
 
-  		z-index: -1;
+    content: '';
 
-  		background-color: $eff2-btn-hover-bg;
-  	}
+    background-color: $eff2-btn-hover-bg;
 
-    &.foxholder-form__button--filled {
+    z-index: -1;
+  }
 
-      &:after {
-        @include position-absolute;
-      }
+  &:hover {
+    color: $eff2-btn-hover-color;
+  }
+}
 
-      &:hover {
-        color: $form-btn-font-color;
-      }
+//from left styles
+.foxholder-form__button--effect-2-left,
+.foxholder-form__button--effect-2-default{
+
+  &:after {
+    @include transition-mix;
+
+    top: 0;
+    left: -100%;
+  }
+
+  &:hover {
+
+    &:after {
+      left: 0;
     }
+  }
+}
 
-    &:hover {
-      color: $eff2-btn-hover-color;
+//from right styles
+.foxholder-form__button--effect-2-right {
+
+  &:after {
+    @include transition-mix;
+
+    top: 0;
+    left: 100%;
+  }
+
+  &:hover {
+
+    &:after {
+      left: 0;
     }
+  }
+}
 
-    //from left styles
-    &-left {
+//from top styles
+.foxholder-form__button--effect-2-top {
 
-      &:after {
-        @include transition-mix;
-        top: 0;
-        left: -100%;
-      }
+  &:after {
+    @include transition-mix;
 
-      &.foxholder-form__button--filled {
+    top: -100%;
+    left: 0;
+  }
 
-        &:after {
-          top: 0;
-          left: 0;
-        }
+  &:hover {
 
-        &:hover {
-
-          &:after {
-            left: -100%;
-          }
-        }
-      }
-
-      &:hover {
-
-        &:after {
-          left: 0;
-        }
-      }
+    &:after {
+      top: 0;
     }
+  }
+}
 
-    //from right styles
-    &-right {
+//from bottom styles
+.foxholder-form__button--effect-2-bottom {
 
-      &:after {
-        @include transition-mix;
-        top: 0;
-        left: 100%;
-      }
+  &:after {
+    @include transition-mix;
 
-      &.foxholder-form__button--filled {
+    top: 100%;
+    left: 0;
+  }
 
-        &:after {
-          top: 0;
-          left: 0;
-        }
+  &:hover {
 
-        &:hover {
-
-          &:after {
-            left: 100%;
-          }
-        }
-      }
-
-      &:hover {
-
-        &:after {
-          left: 0;
-        }
-      }
-    }
-
-    //from top styles
-    &-top {
-
-      &:after {
-        @include transition-mix;
-        top: -100%;
-        left: 0;
-      }
-
-      &.foxholder-form__button--filled {
-
-        &:after {
-          top: 0;
-          left: 0;
-        }
-
-        &:hover {
-
-          &:after {
-            top: -100%;
-          }
-        }
-      }
-
-      &:hover {
-
-        &:after {
-          top: 0;
-        }
-      }
-    }
-
-    //from bottom styles
-    &-bottom {
-
-      &:after {
-        @include transition-mix;
-        top: 100%;
-        left: 0;
-      }
-
-      &.foxholder-form__button--filled {
-
-        &:after {
-          top: 0;
-          left: 0;
-        }
-
-        &:hover {
-
-          &:after {
-            top: 100%;
-          }
-        }
-      }
-
-      &:hover {
-
-        &:after {
-          top: 0;
-        }
-      }
+    &:after {
+      top: 0;
     }
   }
 }

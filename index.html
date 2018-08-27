@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="static/css/bootstrap.min.css" />
     <link rel="stylesheet" href="static/css/help-styles.css" />
     <link rel="stylesheet" href="static/css/prism.css" />
-    <link rel="stylesheet" href="src/foxholder-styles.css" />
+    <link rel="stylesheet" href="src/foxholder.min.css" />
     <!--[if IE]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -59,7 +59,7 @@
         <div class="row">
           <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-10 col-xs-offset-1">
             <div class="logo">
-              <a href="index.html" title="Unique Form Animations Kit |  Form Animationы | FoxHolder"><span>FoxHolder</span><span>v.3.1.0</span></a>
+              <a href="index.html" title="Unique Form Animations Kit |  Form Animations | FoxHolder"><span>FoxHolder</span><span>v.3.2.0</span></a>
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@
             <p class="text-muted">Just pick the most fitted and install on your website in 1 minute!</p>
             <ul class="features-list text-left">
               <li>Placeholder Animations (input and textareas) - <strong>15 unique demos!</strong></li>
-              <li>Button animations <span>new!</span> - <strong>6 nice demos!</strong></li>
+              <li>Button animations <span>new!</span> - <strong>8 nice demos!</strong></li>
               <li>Checkboxes and radiobutton animations (coming soon!)</li>
             </ul>
           </div>
@@ -265,6 +265,8 @@
                 <a class="btn" href="#example-btn-4" title="">Demo 4</a>
                 <a class="btn" href="#example-btn-5" title="">Demo 5</a>
                 <a class="btn" href="#example-btn-6" title="">Demo 6</a>
+                <a class="btn" href="#example-btn-7" title="">Demo 7</a>
+                <a class="btn" href="#example-btn-8" title="">Demo 8</a>
               </nav>
             </div>
             <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
@@ -273,12 +275,9 @@
                 <h3 class="text-center">Button Demo 1</h3>
                 <p class="text-muted text-center">Hover on button to check the effect</p>
                 <form>
-                  <button type="button" data-size="sm">sm empty</button>
-                  <button type="button" data-size="sm" data-filled="filled">sm filled</button>
-                  <button type="button" data-size="md">md empty</button>
-                  <button type="button" data-size="md" data-filled="filled">md filled</button>
-                  <button type="button" data-size="bg">bg empty</button>
-                  <button type="button" data-size="bg" data-filled="filled">bg filled</button>
+                  <button type="button" data-size="sm">Small</button>
+                  <button type="button" data-size="md">Middle</button>
+                  <button type="button" data-size="lg">Large</button>
                 </form>
               </div>
 
@@ -287,43 +286,31 @@
                 <p class="text-danger text-center">(can be used only with &lt;button&gt; tag)</p>
                 <p class="text-muted text-center">Hover on button to check the effect</p>
                 <form>
-                  <p class="text-muted text-center">Left (default)</p>
-                  <button type="button" data-size="sm" data-direction="left">sm empty</button>
-                  <button type="button" data-size="sm" data-filled="filled" data-direction="left">sm filled</button>
-                  <button type="button" data-size="md">md empty</button>
-                  <button type="button" data-size="md" data-filled="filled">md filled</button>
-                  <button type="button" data-size="bg" data-direction="left">bg empty</button>
-                  <button type="button" data-size="bg" data-filled="filled">bg filled</button>
+                  <p class="text-muted text-center">Default (<em>data-effect-parameter="left"</em>)</p>
+                  <button type="button" data-size="sm" data-effect-parameter="left">Small</button>
+                  <button type="button" data-size="md">Middle</button>
+                  <button type="button" data-size="lg" data-effect-parameter="left">Large</button>
                 </form>
 
                 <form>
-                  <p class="text-muted text-center">Right</p>
-                  <button type="button" data-size="sm" data-direction="right">sm empty</button>
-                  <button type="button" data-size="sm" data-filled="filled" data-direction="right">sm filled</button>
-                  <button type="button" data-size="md" data-direction="right">md empty</button>
-                  <button type="button" data-size="md" data-filled="filled" data-direction="right">md filled</button>
-                  <button type="button" data-size="bg" data-direction="right">bg empty</button>
-                  <button type="button" data-size="bg" data-filled="filled" data-direction="right">bg filled</button>
+                  <p class="text-muted text-center">Right (<em>data-effect-parameter="right"</em>)</p>
+                  <button type="button" data-size="sm" data-effect-parameter="right">Small</button>
+                  <button type="button" data-size="md" data-effect-parameter="right">Middle</button>
+                  <button type="button" data-size="lg" data-effect-parameter="right">Large</button>
                 </form>
 
                 <form>
-                  <p class="text-muted text-center">Top</p>
-                  <button type="button" data-size="sm" data-direction="top">sm empty</button>
-                  <button type="button" data-size="sm" data-filled="filled" data-direction="top">sm filled</button>
-                  <button type="button" data-size="md" data-direction="top">md empty</button>
-                  <button type="button" data-size="md" data-filled="filled" data-direction="top">md filled</button>
-                  <button type="button" data-size="bg" data-direction="top">bg empty</button>
-                  <button type="button" data-size="bg" data-filled="filled" data-direction="top">bg filled</button>
+                  <p class="text-muted text-center">Top (<em>data-effect-parameter="top"</em>)</p>
+                  <button type="button" data-size="sm" data-effect-parameter="top">Small</button>
+                  <button type="button" data-size="md" data-effect-parameter="top">Middle</button>
+                  <button type="button" data-size="lg" data-effect-parameter="top">Large</button>
                 </form>
 
                 <form>
-                  <p class="text-muted text-center">Bottom</p>
-                  <button type="button" data-size="sm" data-direction="bottom">sm empty</button>
-                  <button type="button" data-size="sm" data-filled="filled" data-direction="bottom">sm filled</button>
-                  <button type="button" data-size="md" data-direction="bottom">md empty</button>
-                  <button type="button" data-size="md" data-filled="filled" data-direction="bottom">md filled</button>
-                  <button type="button" data-size="bg" data-direction="bottom">bg empty</button>
-                  <button type="button" data-size="bg" data-filled="filled" data-direction="bottom">bg filled</button>
+                  <p class="text-muted text-center">Bottom (data-effect-parameter="bottom")</p>
+                  <button type="button" data-size="sm" data-effect-parameter="bottom">Small</button>
+                  <button type="button" data-size="md" data-effect-parameter="bottom">Middle</button>
+                  <button type="button" data-size="lg" data-effect-parameter="bottom">Large</button>
                 </form>
               </div>
 
@@ -332,43 +319,31 @@
                 <p class="text-danger text-center">(can be used only with &lt;button&gt; tag)</p>
                 <p class="text-muted text-center">Hover on button to check the effect</p>
                 <form>
-                  <p class="text-muted text-center">Vertical (default)</p>
-                  <button type="button" data-size="sm" data-direction="vertical">sm empty</button>
-                  <button type="button" data-size="sm" data-filled="filled">sm filled</button>
-                  <button type="button" data-size="md" data-direction="vertical">md empty</button>
-                  <button type="button" data-size="md" data-filled="filled">md filled</button>
-                  <button type="button" data-size="bg">bg empty</button>
-                  <button type="button" data-size="bg" data-filled="filled">bg filled</button>
+                  <p class="text-muted text-center">Default (<em>data-effect-parameter="vert"</em>)</p>
+                  <button type="button" data-size="sm" data-effect-parameter="vert">Small</button>
+                  <button type="button" data-size="md" data-effect-parameter="vert">Middle</button>
+                  <button type="button" data-size="lg">Large</button>
                 </form>
 
                 <form>
-                  <p class="text-muted text-center">Horizontal</p>
-                  <button type="button" data-size="sm" data-direction="horizontal">sm empty</button>
-                  <button type="button" data-size="sm" data-filled="filled" data-direction="horizontal">sm filled</button>
-                  <button type="button" data-size="md" data-direction="horizontal">md empty</button>
-                  <button type="button" data-size="md" data-filled="filled" data-direction="horizontal">md filled</button>
-                  <button type="button" data-size="bg" data-direction="horizontal">bg empty</button>
-                  <button type="button" data-size="bg" data-filled="filled" data-direction="horizontal">bg filled</button>
+                  <p class="text-muted text-center">Horizontal (<em>data-effect-parameter="horz"</em>)</p>
+                  <button type="button" data-size="sm" data-effect-parameter="horz">Small</button>
+                  <button type="button" data-size="md" data-effect-parameter="horz">Middle</button>
+                  <button type="button" data-size="lg" data-effect-parameter="horz">Large</button>
                 </form>
 
                 <form>
-                  <p class="text-muted text-center">Horizontal and Vertical</p>
-                  <button type="button" data-size="sm" data-direction="horz-vert">sm empty</button>
-                  <button type="button" data-size="sm" data-filled="filled" data-direction="horz-vert">sm filled</button>
-                  <button type="button" data-size="md" data-direction="horz-vert">md empty</button>
-                  <button type="button" data-size="md" data-filled="filled" data-direction="horz-vert">md filled</button>
-                  <button type="button" data-size="bg" data-direction="horz-vert">bg empty</button>
-                  <button type="button" data-size="bg" data-filled="filled" data-direction="horz-vert">bg filled</button>
+                  <p class="text-muted text-center">Horizontal and Vertical (<em>data-effect-parameter="horzVert"</em>)</p>
+                  <button type="button" data-size="sm" data-effect-parameter="horzVert">Small</button>
+                  <button type="button" data-size="md" data-effect-parameter="horzVert">Middle</button>
+                  <button type="button" data-size="lg" data-effect-parameter="horzVert">Large</button>
                 </form>
 
                 <form>
-                  <p class="text-muted text-center">Diagonal</p>
-                  <button type="button" data-size="sm" data-direction="diagonal">sm empty</button>
-                  <button type="button" data-size="sm" data-filled="filled" data-direction="diagonal">sm filled</button>
-                  <button type="button" data-size="md" data-direction="diagonal">md empty</button>
-                  <button type="button" data-size="md" data-filled="filled" data-direction="diagonal">md filled</button>
-                  <button type="button" data-size="bg" data-direction="diagonal">bg empty</button>
-                  <button type="button" data-size="bg" data-filled="filled" data-direction="diagonal">bg filled</button>
+                  <p class="text-muted text-center">Diagonal (<em>data-effect-parameter="diagonal"</em>)</p>
+                  <button type="button" data-size="sm" data-effect-parameter="diagonal">Small</button>
+                  <button type="button" data-size="md" data-effect-parameter="diagonal">Middle</button>
+                  <button type="button" data-size="lg" data-effect-parameter="diagonal">Large</button>
                 </form>
               </div>
 
@@ -376,38 +351,94 @@
                 <h3 class="text-center">Button Demo 4</h3>
                 <p class="text-muted text-center">Hover on button to check the effect</p>
                 <form>
-                  <button type="button" data-size="sm">sm empty</button>
-                  <button type="button" data-size="sm" data-filled="filled">sm filled</button>
-                  <button type="button" data-size="md">md empty</button>
-                  <button type="button" data-size="md" data-filled="filled">md filled</button>
-                  <button type="button" data-size="bg">bg empty</button>
-                  <button type="button" data-size="bg" data-filled="filled">bg filled</button>
+                  <button type="button" data-size="sm">Small</button>
+                  <button type="button" data-size="md">Middle</button>
+                  <button type="button" data-size="lg">Large</button>
                 </form>
               </div>
 
               <div class="form-container form-container--buttons form-container--effect-25" id="example-btn-5">
-                <h3 class="text-center">Button Demo 5</h3>
-                <p class="text-muted text-center">Hover on button to check the effect</p>
-                <form>
-                  <button type="button" data-size="sm">sm empty</button>
-                  <button type="button" data-size="sm" data-filled="filled">sm filled</button>
-                  <button type="button" data-size="md">md empty</button>
-                  <button type="button" data-size="md" data-filled="filled">md filled</button>
-                  <button type="button" data-size="bg">bg empty</button>
-                  <button type="button" data-size="bg" data-filled="filled">bg filled</button>
-                </form>
-              </div>
+              <h3 class="text-center">Button Demo 5</h3>
+              <p class="text-danger text-center">(can be used only with &lt;button&gt; tag)</p>
+              <p class="text-muted text-center">Hover on button to check the effect</p>
+              <form>
+                <p class="text-muted text-center">Here you need to specify text you want to show on hover in data-effect-parameter (<em>data-effect-parameter="Your Text"</em>)</p>
+                <button type="button" data-size="sm" data-effect-parameter="Small">Small</button>
+                <button type="button" data-size="md" data-effect-parameter="Middle">Middle</button>
+                <button type="button" data-size="lg" data-effect-parameter="Large">Large</button>
+              </form>
+            </div>
 
-              <div class="form-container form-container--buttons form-container--effect-26" id="example-btn-6">
-                <h3 class="text-center">Button Demo 6</h3>
+            <div class="form-container form-container--buttons form-container--effect-26" id="example-btn-6">
+              <h3 class="text-center">Button Demo 6</h3>
+              <p class="text-danger text-center">(can be used only with &lt;button&gt; tag)</p>
+              <p class="text-muted text-center">Hover on button to check the effect</p>
+              
+              <form>
+                <p class="text-muted text-center">Default (<em>data-effect-parameter="horz-side"</em>)</p>
+                <button type="button" data-size="sm" data-effect-parameter="horz-side">Small</button>
+                <button type="button" data-size="md" data-effect-parameter="horz-side">Middle</button>
+                <button type="button" data-size="lg">Large</button>
+              </form>
+  
+              <form>
+                <p class="text-muted text-center">Horizontal Center (<em>data-effect-parameter="horz-center"</em>)</p>
+                <button type="button" data-size="sm" data-effect-parameter="horz-center">Small</button>
+                <button type="button" data-size="md" data-effect-parameter="horz-center">Middle</button>
+                <button type="button" data-size="lg" data-effect-parameter="horz-center">Large</button>
+              </form>
+  
+              <form>
+                <p class="text-muted text-center">Horizontal and Vertical (<em>data-effect-parameter="horzVert"</em>)</p>
+                <button type="button" data-size="sm" data-effect-parameter="horzVert">Small</button>
+                <button type="button" data-size="md" data-effect-parameter="horzVert">Middle</button>
+                <button type="button" data-size="lg" data-effect-parameter="horzVert">Large</button>
+              </form>
+            </div>
+  
+            <div class="form-container form-container--buttons form-container--effect-27" id="example-btn-7">
+              <h3 class="text-center">Button Demo 7</h3>
+              <p class="text-danger text-center">(can be used only with &lt;button&gt; tag)</p>
+              <p class="text-muted text-center">Hover on button to check the effect</p>
+  
+              <form>
+                <p class="text-muted text-center">Default (<em>data-effect-parameter="inside"</em>)</p>
+                <button type="button" data-size="sm" data-effect-parameter="inside">Small</button>
+                <button type="button" data-size="md" data-effect-parameter="inside">Middle</button>
+                <button type="button" data-size="lg">Large</button>
+              </form>
+  
+              <form>
+                <p class="text-muted text-center">Outside (<em>data-effect-parameter="outside"</em>)</p>
+                <button type="button" data-size="sm" data-effect-parameter="outside">Small</button>
+                <button type="button" data-size="md" data-effect-parameter="outside">Middle</button>
+                <button type="button" data-size="lg" data-effect-parameter="outside">Large</button>
+              </form>
+            </div>
+  
+              <div class="form-container form-container--buttons form-container--effect-28" id="example-btn-8">
+                <h3 class="text-center">Button Demo 8</h3>
                 <p class="text-muted text-center">Hover on button to check the effect</p>
+    
                 <form>
-                  <button type="button" data-size="sm">sm empty</button>
-                  <button type="button" data-size="sm" data-filled="filled">sm filled</button>
-                  <button type="button" data-size="md">md empty</button>
-                  <button type="button" data-size="md" data-filled="filled">md filled</button>
-                  <button type="button" data-size="bg">bg empty</button>
-                  <button type="button" data-size="bg" data-filled="filled">bg filled</button>
+                  <p class="text-muted text-center">Shadow size small (<em>data-effect-parameter="sm"</em>)</p>
+                  <button type="button" data-size="sm" data-effect-parameter="sm">Small</button>
+                  <button type="button" data-size="md" data-effect-parameter="sm">Middle</button>
+                  <button type="button" data-size="lg" data-effect-parameter="sm">Large</button>
+                </form>
+    
+                <form>
+                  <p class="text-muted text-center">Default (<em>data-effect-parameter="md"</em>)</p>
+                  <button type="button" data-size="sm" data-effect-parameter="md">Small</button>
+                  <button type="button" data-size="md" data-effect-parameter="md">Middle</button>
+                  <button type="button" data-size="lg">Large</button>
+                </form>
+  
+                <form>
+                  <p class="text-muted text-center">Shadow size large (<em>data-effect-parameter="lg"</em>)</p>
+                  <button type="button" data-size="sm" data-effect-parameter="lg">Small</button>
+                  <button type="button" data-size="md" data-effect-parameter="lg">Middle</button>
+                  <button type="button" data-size="lg" data-effect-parameter="lg">Large</button>
                 </form>
               </div>
 
@@ -458,72 +489,18 @@
                         <ul>
                           <li><em>data-size="sm"</em> - a small button</li>
                           <li><em>data-size="md"</em> - a middle button</li>
-                          <li><em>data-size="bg"</em> - a big button</li>
+                          <li><em>data-size="lg"</em> - a large button</li>
                         </ul>
                       </li>
 
-                      <li>use <em>data-filled="filled"</em> attribute to create a filled button (it's of 'empty') style by default</li>
-
-                      <li>use <em>data-direction</em> attribute to add an effect direction (<strong class="text-danger">Only for #2 and #3 Button Demo</strong>):
-
-                        <table>
-                          <thead>
-                            <tr>
-                              <th colspan="2"><strong class="text-danger">Button Demo #2 data-direction attributes</strong></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td><em>data-direction="left"</em><br>or no data-direction attribute</td>
-                              <td>Button Demo #2 <em>Left</em> effect</td>
-                            </tr>
-                            <tr>
-                              <td><em>data-direction="right"</em></td>
-                              <td>Button Demo #2 <em>Right</em> effect</td>
-                            </tr>
-                            <tr>
-                              <td><em>data-direction="top"</em></td>
-                              <td>Button Demo #2 <em>Top</em> effect</td>
-                            </tr>
-                            <tr>
-                              <td><em>data-direction="bottom"</em></td>
-                              <td>Button Demo #2 <em>Bottom</em> effect</td>
-                            </tr>
-                          </tbody>
-                        </table>
-
-                        <table class="m-bottom">
-                          <thead>
-                            <tr>
-                              <th colspan="2"><strong class="text-danger">Button Demo #3 data-direction attributes</strong></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td><em>data-direction="vertical"</em><br>or no data-direction attribute</td>
-                              <td>Button Demo #3 <em>Vertical</em> effect</td>
-                            </tr>
-                            <tr>
-                              <td><em>data-direction="horizontal"</em></td>
-                              <td>Button Demo #3 <em>Horizontal</em> effect</td>
-                            </tr>
-                            <tr>
-                              <td><em>data-direction="horz-vert"</em></td>
-                              <td>Button Demo #3 <em>Horizontal and Vertical</em> effect</td>
-                            </tr>
-                            <tr>
-                              <td><em>data-direction="diagonal"</em></td>
-                              <td>Button Demo #3 <em>Diagonal</em> effect</td>
-                            </tr>
-                          </tbody>
-                        </table>
-
+                      <li>use <em>data-effect-parameter</em> attribute to add an attribute for effect like direction (<strong class="text-danger">only for Demos with multiple variants, like Demo #2</strong>). Proper <em>data-effect-parameter</em> you can find in the parentheses near the demo variant name. If you don't specify <em>data-effect-parameter</em>, the default variant will be applied.
                       </li>
                       
                     </ul>
+                    
                     <pre>
-<code class="language-html">&lt;button type="submit" data-size="sm" data-filled="filled" data-direction="horz-vert">Submit&lt;button>
-<strong class="text-danger">Helps to create small filled button with a <em>Horizontal and Vertical</em> direction of Button Demo #3</strong>      
+<code class="language-html">&lt;button type="submit" data-size="sm" data-effect-parameter="horzVert">Submit&lt;button>
+<strong class="text-danger">Helps to create small button with a <em>Horizontal and Vertical</em> direction of Button Demo #3</strong>
 </code>
                     </pre>
                   </li>
@@ -538,7 +515,7 @@
                     <h4>Add foxholder.min.js from <strong>src</strong> folder (or foxholder.js if you need a developer version) before closing &lt;body&gt; tag after jQuery init:</h4>
                     <pre>
 <code class="language-html">&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">&lt;/script>
-&lt;script src="scripts/foxholder.js">&lt;/script></code>
+&lt;script src="scripts/foxholder.min.js">&lt;/script></code>
                     </pre>
                   </li>
                   <li>
@@ -547,7 +524,7 @@
 <code class="language-js">
   jQuery('.your-class').foxholder({
     placeholderDemo: 1, // for placeholder demo (1 - 15)
-    buttonDemo: 1 //for button demos (1 - 6), if you need a button effect
+    buttonDemo: 1 //for button demos (1 - 8), if you need a button effect
   });
 </code>                      
                     </pre>
@@ -593,7 +570,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="text-center">
-              <p>© Natali Davydova, 2016</p>
+              <p>© Natali Davydova, 2016 - 2018</p>
             </div>
           </div>
         </div>

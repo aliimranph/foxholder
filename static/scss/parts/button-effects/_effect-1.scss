@@ -6,24 +6,12 @@ $eff1-btn-hover-color-filled: $basic-settings-color;
 $eff1-btn-hover-bg-filled: $light-settings-color;
 
 //button effect 1
-.foxholder-form__button {
+.foxholder-form__button--effect-1 {
+  @include transition-mix;
 
-  &--effect-1 {
-    @include transition-mix;
+  &:hover {
+    color: $eff1-btn-hover-color;
 
-    &:hover {
-      color: $eff1-btn-hover-color;
-
-      background-color: $eff1-btn-hover-bg;
-    }
-
-    &.foxholder-form__button--filled {
-      
-      &:hover {
-        color: $eff1-btn-hover-color-filled;
-
-        background-color: $eff1-btn-hover-bg-filled;
-      }
-    }
+    background-color: $eff1-btn-hover-bg;
   }
 }

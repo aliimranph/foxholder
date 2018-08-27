@@ -3,22 +3,12 @@ $eff4-btn-hover-color: $light-settings-color;
 $eff4-btn-hover-bg: $basic-settings-color;
 
 //button effect 4
-.foxholder-form__button {
+.foxholder-form__button--effect-4 {
+  @include transition-mix;
 
-  &--effect-4 {
-    @include transition-mix;
+  &:hover {
+    color: $eff4-btn-hover-color;
 
-    &.foxholder-form__button--filled {
-
-      &:hover {
-        box-shadow: inset 0px 0px 10px 30px $form-btn-bg-color;
-        color: $form-btn-font-color;
-      }
-    }
-
-    &:hover {
-      box-shadow: inset 0px 0px 10px 30px $eff4-btn-hover-bg;
-      color: $eff4-btn-hover-color;
-    }
+    box-shadow: inset 0px 0px 10px 30px $eff4-btn-hover-bg;
   }
 }

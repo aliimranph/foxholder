@@ -3,109 +3,100 @@ $eff3-btn-hover-color: $light-settings-color;
 $eff3-btn-hover-bg: $basic-settings-color;
 
 //button effect 3
-.foxholder-form__button {
+.foxholder-form__button--effect-3 {
+  transform: translateZ(0);
 
-  &--effect-3 {
-  	transform: translateZ(0);
-    
-    //basic styles
-  	&:after {
-  		@include position-absolute($top: 0, $left: 0);
+  //basic styles
+  &:after {
+    @include position-absolute($top: 0, $left: 0);
 
-  		content: '';
-  		display: block;
-  		width: 100%;
-  		height: 100%;
+    display: block;
+    width: 100%;
+    height: 100%;
 
-  		z-index: -1;
-  		transform-origin: center center;
+    content: '';
 
+    transform-origin: center center;
 
-  		background-color: $eff3-btn-hover-bg;
-  	}
+    background-color: $eff3-btn-hover-bg;
 
-    &.foxholder-form__button--filled {
+    z-index: -1;
+  }
 
-      &:after {
-      	background-color: $form-btn-bg-color;
-      }
+  &:hover {
+    color: $eff3-btn-hover-color;
 
-      &:hover {
-        color: $form-btn-font-color;
-      }
+    &:after {
+      @include transition-mix;
     }
+  }
+}
 
-    &:hover {
-      color: $eff3-btn-hover-color;
+//vertical effect styles
+.foxholder-form__button--effect-3-vert,
+.foxholder-form__button--effect-3-default{
 
-      &:after {
-      	@include transition-mix;
-      }
+  &:after {
+      transform: scale(0,1);
+  }
+
+  &:hover {
+
+    &:after {
+        transform: scale(1,1);
     }
+  }
+}
 
-    //vertical effect styles
-    &-vert {
+//horizontal effect styles
+.foxholder-form__button--effect-3-horz {
 
-    	&:after {
-    		transform: scale(0,1);
-    	}
+  &:after {
+    transform: scale(1,0);
+  }
 
-    	&:hover {
+  &:hover {
 
-    		&:after {
-    			transform: scale(1,1);
-    		}
-    	}
+    &:after {
+      transform: scale(1,1);
     }
+  }
+}
 
-    //horizontal effect styles
-    &-horz {
+//horizontal and vertical effect styles
+.foxholder-form__button--effect-3-horzVert {
 
-    	&:after {
-    		transform: scale(1,0);
-    	}
+  &:after {
+    transform: scale(0);
+  }
 
-    	&:hover {
+  &:hover {
 
-    		&:after {
-    			transform: scale(1,1);
-    		}
-    	}
+    &:after {
+      transform: scale(1);
     }
+  }
+}
 
-    //horizontal and vertical effect styles
-    &-horzVert {
+//diagonal effect styles
+.foxholder-form__button--effect-3-diagonal {
 
-    	&:after {
-    		transform: scale(0);
-    	}
+  &:after {
+    top: 50%;
+    left: 50%;
 
-    	&:hover {
+    height: 300%;
+    width: 300%;
 
-    		&:after {
-    			transform: scale(1);
-    		}
-    	}
-    }
+    transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  }
 
-    //diagonal effect styles
-    &-diagonal {
+  &:hover {
 
-    	&:after {
-    		top: 50%;
-    		left: 50%;
-    		height: 300%;
-    		width: 300%;
-    		transform: translate(-50%, -50%) rotate(45deg) scale(0);
-    	}
+    &:after {
+      @include transition-mix($duration: .3s);
 
-    	&:hover {
-
-    		&:after {
-    			@include transition-mix($duration: .3s);
-    			transform: translate(-50%, -50%) rotate(45deg) scale(1);
-    		}
-    	}
+      transform: translate(-50%, -50%) rotate(45deg) scale(1);
     }
   }
 }

@@ -1,14 +1,43 @@
 //variables
-$eff5-btn-border-r: 50px;
+$eff5-btn-hover-color: $light-settings-color;
+$eff5-btn-hover-bg: $basic-settings-color;
 
 //button effect 5
-.foxholder-form__button {
+.foxholder-form__button--effect-5  {
+  overflow: visible;
 
-  &--effect-5 {
-    @include transition-mix($duration: .35s);
+  //after block
+  &:after {
+    @include position-absolute($top: 0, $left: 0);
+    @include transition-mix();
 
-    &:hover {
-      border-radius: $eff5-btn-border-r;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    content: attr(data-effect-parameter);
+
+    text-align: center;
+    color: $eff5-btn-hover-color;
+
+    transform: scale(1.2);
+
+    background-color: $eff5-btn-hover-bg;
+
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  //hover effect
+  &:hover {
+
+    &:after {
+      transform: scale(1);
+
+      opacity: 1;
+      visibility: visible;
     }
   }
 }

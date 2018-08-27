@@ -20,7 +20,7 @@ jQuery.fn.foxholder = function(parameter) {
     _onloadClasses(this);
 
     //buttons script (size and effect direction applied)
-    _buttons(this);
+    _buttons(this, parameter.buttonDemo);
 
     //single demo scripts
     _singleLabeledScripts();
@@ -119,58 +119,31 @@ function _onloadClasses(form) {
 }
 
 //buttons script (size and effect direction applied)
-function _buttons(form) {
+function _buttons(form, buttonParameter) {
     var buttons = form.find('.foxholder-form__button');
 
     buttons.each(function () {
 
         var currentBtn = jQuery(this),
             currentBthSize = currentBtn.attr('data-size'),
-            currentBtnFilled = currentBtn.attr('data-filled');
+            currentBtnEffParameter = currentBtn.attr('data-effect-parameter');
 
         //button size
         if (currentBthSize === 'sm') {
             currentBtn.addClass('foxholder-form__button--small');
-        } else if (currentBthSize === 'bg') {
-            currentBtn.addClass('foxholder-form__button--big');
+        } else if (currentBthSize === 'lg') {
+            currentBtn.addClass('foxholder-form__button--large');
         } else {
             currentBtn.addClass('foxholder-form__button--medium');
         }
 
-        //filled state
-        if (currentBtnFilled === 'filled') {
-            currentBtn.addClass('foxholder-form__button--filled');
+        //effect parameter
+        if (currentBtnEffParameter !== undefined) {
+            currentBtn.addClass('foxholder-form__button--effect-' + buttonParameter + '-' + currentBtnEffParameter);
+        } else {
+            currentBtn.addClass('foxholder-form__button--effect-' + buttonParameter + '-default');
         }
-    });
 
-    //effect #2 script
-    jQuery('.foxholder-form__button--effect-2').each(function() {
-        btnDirection = jQuery(this).attr('data-direction');
-
-        if(btnDirection === 'left' || btnDirection === undefined) {
-            jQuery(this).addClass('foxholder-form__button--effect-2-left');
-        } else if (btnDirection === 'right') {
-            jQuery(this).addClass('foxholder-form__button--effect-2-right');
-        } else if (btnDirection === 'top') {
-            jQuery(this).addClass('foxholder-form__button--effect-2-top');
-        } else if (btnDirection === 'bottom') {
-            jQuery(this).addClass('foxholder-form__button--effect-2-bottom');
-        }
-    });
-
-    //effect #3 script
-    jQuery('.foxholder-form__button--effect-3').each(function() {
-        btnDirection = jQuery(this).attr('data-direction');
-
-        if(btnDirection === 'vertical' || btnDirection === undefined) {
-            jQuery(this).addClass('foxholder-form__button--effect-3-vert');
-        } else if (btnDirection === 'horizontal') {
-            jQuery(this).addClass('foxholder-form__button--effect-3-horz');
-        } else if (btnDirection === 'horz-vert') {
-            jQuery(this).addClass('foxholder-form__button--effect-3-horzVert');
-        } else if (btnDirection === 'diagonal') {
-            jQuery(this).addClass('foxholder-form__button--effect-3-diagonal');
-        }
     });
 }
 
