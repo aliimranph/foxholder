@@ -1,4 +1,4 @@
-# Foxholder v.3.2.0
+# Foxholder v.3.2.1
 
 - Placeholder Animations (input and textareas) - 15 unique demos!
 - Button animations - 8 demos (**2 new demos added in 3.2.0**)
