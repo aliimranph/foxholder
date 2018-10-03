@@ -29,30 +29,34 @@ jQuery.fn.foxholder = function(parameter) {
 //foxholder elements effect classes
 function _elementClasses (form, placeholderParameter, buttonParameter) {
 
-    var formChildren = form.children();
+    var formChildren = [];
 
-    formChildren.each(function () {
+    formChildren.push(form.find('input'));
+    formChildren.push(form.find('textarea'));
+    formChildren.push(form.find('button'));
+
+    formChildren.forEach(function (item) {
 
         //for inputs with animated labels
-        if (jQuery(this).is('input')) {
+        if (jQuery(item).is('input')) {
 
-            var inputType = jQuery(this).attr('type'),
+            var inputType = jQuery(item).attr('type'),
                 validTypes = ['email', 'password', 'search', 'tel', 'text', 'url'];
 
             if(validTypes.indexOf(inputType) !== -1) {
-                jQuery(this).addClass('foxholder-form__labeled foxholder-form__input foxholder-form__input--effect-'+ placeholderParameter +' foxholder-form__wrapped');
+                jQuery(item).addClass('foxholder-form__labeled foxholder-form__input foxholder-form__input--effect-'+ placeholderParameter +' foxholder-form__wrapped');
             }
 
         }
 
         //for textareas
-        if (jQuery(this).is('textarea')) {
-            jQuery(this).addClass('foxholder-form__labeled foxholder-form__textarea foxholder-form__textarea--effect-'+ placeholderParameter +' foxholder-form__wrapped')
+        if (jQuery(item).is('textarea')) {
+            jQuery(item).addClass('foxholder-form__labeled foxholder-form__textarea foxholder-form__textarea--effect-'+ placeholderParameter +' foxholder-form__wrapped')
         }
 
         //for buttons
-        if (jQuery(this).is('button') || jQuery(this).is('input[type="submit"]')) {
-            jQuery(this).addClass('foxholder-form__button foxholder-form__button--effect-' + buttonParameter);
+        if (jQuery(item).is('button') || jQuery(item).is('input[type="submit"]')) {
+            jQuery(item).addClass('foxholder-form__button foxholder-form__button--effect-' + buttonParameter);
         }
 
     });
