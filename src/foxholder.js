@@ -31,9 +31,23 @@ function _elementClasses (form, placeholderParameter, buttonParameter) {
 
     var formChildren = [];
 
-    formChildren.push(form.find('input'));
-    formChildren.push(form.find('textarea'));
-    formChildren.push(form.find('button'));
+    form.find('input').each(function () {
+
+        formChildren.push(jQuery(this));
+
+    });
+
+    form.find('textarea').each(function () {
+
+        formChildren.push(jQuery(this));
+
+    });
+
+    form.find('button').each(function () {
+
+        formChildren.push(jQuery(this));
+
+    });
 
     formChildren.forEach(function (item) {
 
